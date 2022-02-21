@@ -9,11 +9,11 @@ namespace Services
     public class UserServices : IUserServices
     {
         private readonly IRepositoryDB<UserLoginEFModels> repositoryLogin;
-        private readonly IMapper mapper;
-        public UserServices(IRepositoryDB<UserLoginEFModels> repositoryLogin, IMapper mapper)
+        //private readonly IMapper mapper;
+        public UserServices(IRepositoryDB<UserLoginEFModels> repositoryLogin/*, IMapper mapper*/)
         {
             this.repositoryLogin = repositoryLogin;
-            this.mapper = mapper;
+            //this.mapper = mapper;
         }
 
         /// <summary>

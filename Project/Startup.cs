@@ -43,10 +43,10 @@ namespace Project
             //services.AddAutoMapper(typeof(AutoMapperConfigs));
             //注入仓储
             services.AddScoped(typeof(IRepositoryDB<>), typeof(RepositorySqlDB<>));//增删改查反
-            services.AddScoped<IUserServices, UserServices>();  //用户服务
+
             #region 注入服务类
             //这里写注入服务类
-
+            services.AddScoped<IUserServices, UserServices>();  //用户服务
             #endregion
 
             services.AddControllers();

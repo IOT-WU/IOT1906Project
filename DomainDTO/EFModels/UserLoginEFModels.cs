@@ -20,9 +20,5 @@ namespace DomainDTO.EFModels
         /// 用户密码
         /// </summary>
         public string UserPass { get; set; }
-        /// <summary>
-        /// 真实姓名
-        /// </summary>
-        public string RealName { get; set; }
     }
 }
