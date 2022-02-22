@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DomainDTO.EFModels
 {
-    public class LeaveEFModels : BaseModels
+    public class Leave : BaseModels
     {
         [Key]
         public int Id { get; set; }
