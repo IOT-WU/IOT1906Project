@@ -3,21 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project", "Project\Project.csproj", "{D1EC25B0-428E-4FEC-885A-850F4D718F29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project", "Project\Project.csproj", "{D1EC25B0-428E-4FEC-885A-850F4D718F29}"
+	ProjectSection(ProjectDependencies) = postProject
+		{864C7DDC-DFE0-42AE-A880-D5DEC8B50F0D} = {864C7DDC-DFE0-42AE-A880-D5DEC8B50F0D}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainDTO", "DomainDTO\DomainDTO.csproj", "{45860262-EB5A-44E9-A976-91A32A934377}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainDTO", "DomainDTO\DomainDTO.csproj", "{45860262-EB5A-44E9-A976-91A32A934377}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRepository", "IRepository\IRepository.csproj", "{05D2027D-BA60-4B25-82E0-1CF6673F078D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRepository", "IRepository\IRepository.csproj", "{05D2027D-BA60-4B25-82E0-1CF6673F078D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{62F4E5CA-553F-4351-85C3-00C2C9CE6380}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{62F4E5CA-553F-4351-85C3-00C2C9CE6380}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDB", "MyDB\MyDB.csproj", "{CDAD2990-6954-4E4C-A94C-2C4748306382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDB", "MyDB\MyDB.csproj", "{CDAD2990-6954-4E4C-A94C-2C4748306382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IServices", "IServices\IServices.csproj", "{19CD2861-9F83-462A-B357-FC5C1507C8FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IServices", "IServices\IServices.csproj", "{19CD2861-9F83-462A-B357-FC5C1507C8FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{E8A90F4B-D121-4DA9-99A1-64560CA45DF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{E8A90F4B-D121-4DA9-99A1-64560CA45DF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{864C7DDC-DFE0-42AE-A880-D5DEC8B50F0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools", "Tools\Tools.csproj", "{864C7DDC-DFE0-42AE-A880-D5DEC8B50F0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
