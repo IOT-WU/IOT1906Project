@@ -1,4 +1,5 @@
 ﻿using DomainDTO.EFModels;
+using DomainDTO.InPutModels;
 using IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +30,7 @@ namespace Project.Controllers
         /// <returns></returns>
 
         [HttpPost, Route("api/Login")]
-        public IActionResult Login([FromBody] UserLoginEFModels model)
+        public IActionResult Login([FromBody] UserLoginInputModels model)
         {
             //登陆服务
             var IsCun = userServices.UserLogin(model);
@@ -48,7 +49,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="tokenModel"></param>
         /// <returns></returns>
-        private string GetJWT(UserLoginEFModels tokenModel)
+        private string GetJWT(UserLoginInputModels tokenModel)
         {
             //DateTime utc = DateTime.UtcNow;
             var claims = new List<Claim>
