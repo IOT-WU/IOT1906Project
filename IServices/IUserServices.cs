@@ -1,4 +1,5 @@
 ﻿using DomainDTO.EFModels;
+using DomainDTO.InPutModels;
 using System;
 
 namespace IServices
@@ -10,6 +11,6 @@ namespace IServices
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        UserLoginEFModels UserLogin(UserLoginEFModels model);
+        BPMSysUsers UserLogin(UserLoginInputModels model);
     }
 }

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainDTO.EFModels
+namespace DomainDTO.InPutModels
 {
     /// <summary>
     /// 用户登录类
     /// </summary>
-    public class UserLoginEFModels
+    public class UserLoginInputModels
     {
         public int Id { get; set; }
         /// <summary>

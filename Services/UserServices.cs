@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using DomainDTO.EFModels;
+using DomainDTO.InPutModels;
 using IRepository;
 using IServices;
 using System;
@@ -8,9 +9,9 @@ namespace Services
 {
     public class UserServices : IUserServices
     {
-        private readonly IRepositoryDB<UserLoginEFModels> repositoryLogin;
+        private readonly IRepositoryDB<BPMSysUsers> repositoryLogin;
         //private readonly IMapper mapper;
-        public UserServices(IRepositoryDB<UserLoginEFModels> repositoryLogin/*, IMapper mapper*/)
+        public UserServices(IRepositoryDB<BPMSysUsers> repositoryLogin/*, IMapper mapper*/)
         {
             this.repositoryLogin = repositoryLogin;
             //this.mapper = mapper;
@@ -21,9 +22,9 @@ namespace Services
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public UserLoginEFModels UserLogin(UserLoginEFModels model)
+        public BPMSysUsers UserLogin(UserLoginInputModels model)
         {
-            var obj = repositoryLogin.GetModel(x => x.UserName.Equals(model.UserName) & x.UserPass.Equals(model.UserPass));
+            var obj = repositoryLogin.GetModel(x => x.Account.Equals(model.UserName) & x.Password.Equals(model.UserPass));
             return obj;
         }
     }
