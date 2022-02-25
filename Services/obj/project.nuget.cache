@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "aiZzhU13cJIKCLr0Vk2Xz64EuKnYhtZoveHT5ezuSq66yzOjuthnuRCDaqbx8jGmgUvPjlv8mPcxey+uzWBimQ==",
+  "dgSpecHash": "TbwD2UADZVKJC6e7SzXlb2a9ptROAJQnkA5sys+svFomaaczREOMwfPIrkk+YtsbCaA89Pb4hJlmFyS7U9i53w==",
   "success": true,
-  "projectFilePath": "E:\\克隆代码2\\Services\\Services.csproj",
+  "projectFilePath": "E:\\资料\\代码\\Project\\Services\\Services.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gyk\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
-    "C:\\Users\\gyk\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
-    "C:\\Users\\gyk\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\gyk\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\gyk\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\wujun\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\wujun\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\wujun\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\wujun\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\wujun\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
