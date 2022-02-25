@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MyDB.Migrations
 {
-    public partial class v14 : Migration
+    public partial class v10 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Leaves",
+                name: "Leave",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -21,14 +21,14 @@ namespace MyDB.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Leaves", x => x.Id);
+                    table.PrimaryKey("PK_Leave", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Leaves");
+                name: "Leave");
         }
     }
 }

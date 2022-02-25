@@ -11,7 +11,6 @@ namespace DomainDTO.InPutModels
     /// </summary>
     public class UserLoginInputModels
     {
-        public int Id { get; set; }
         /// <summary>
         /// 用户姓名
         /// </summary>

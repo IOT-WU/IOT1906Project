@@ -10,8 +10,8 @@ using MyDB;
 namespace MyDB.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    [Migration("20220222100609_v1.5")]
-    partial class v15
+    [Migration("20220224121831_v1.0")]
+    partial class v10
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace MyDB.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DomainDTO.EFModels.LeaveEFModels", b =>
+            modelBuilder.Entity("DomainDTO.EFModels.Leave", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -46,24 +46,6 @@ namespace MyDB.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Leave");
-                });
-
-            modelBuilder.Entity("DomainDTO.EFModels.UserLoginEFModels", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserPass")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("UserLogin");
                 });
 #pragma warning restore 612, 618
         }

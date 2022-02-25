@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 
 namespace DomainDTO.EFModels
 {
-    /// <summary>
-    /// 用户信息表（登录）
-    /// </summary>
     public class BPMSysUsers
     {
         [Key]
@@ -17,7 +14,7 @@ namespace DomainDTO.EFModels
         public string Password { get; set; }
         public bool SysUser { get; set; }
         public string DisplayName { get; set; }
-        public string Description { get; set; } 
+        public string Description { get; set; }
         public string Sex { get; set; }
         public DateTime Birthday { get; set; }
         public string HRID { get; set; }

@@ -19,49 +19,83 @@ namespace MyDB.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DomainDTO.EFModels.LeaveEFModels", b =>
+            modelBuilder.Entity("DomainDTO.EFModels.BPMSysUsers", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Account")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("Day")
+                    b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("EndDate")
+                    b.Property<DateTime>("Birthday")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("LeaveType")
+                    b.Property<string>("CostCenter")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("StartDate")
+                    b.Property<DateTime>("DateHired")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TaskId")
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Disabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("DisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EMail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HRID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HomePhone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Location")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LogonProvider")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mobile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameSpell")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Office")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OfficePhone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sex")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SysUser")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("UserLevel")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("Leave");
-                });
-
-            modelBuilder.Entity("DomainDTO.EFModels.UserLoginEFModels", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("UserName")
+                    b.Property<string>("WWWHomePage")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserPass")
+                    b.Property<string>("家庭电话")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("Account");
 
-                    b.ToTable("UserLogin");
+                    b.ToTable("BPMSysUsers");
                 });
 #pragma warning restore 612, 618
         }
