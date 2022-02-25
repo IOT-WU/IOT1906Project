@@ -283,23 +283,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wujun\\.nuget\\packages\\": {},
-    "D:\\wujunhao\\VS\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gyk\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\资料\\代码\\Project\\Services\\Services.csproj",
+      "projectUniqueName": "E:\\克隆代码3\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "E:\\资料\\代码\\Project\\Services\\Services.csproj",
-      "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
-      "outputPath": "E:\\资料\\代码\\Project\\Services\\obj\\",
+      "projectPath": "E:\\克隆代码3\\Services\\Services.csproj",
+      "packagesPath": "C:\\Users\\gyk\\.nuget\\packages\\",
+      "outputPath": "E:\\克隆代码3\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -314,11 +314,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj"
+            "E:\\克隆代码3\\IRepository\\IRepository.csproj": {
+              "projectPath": "E:\\克隆代码3\\IRepository\\IRepository.csproj"
             },
-            "E:\\资料\\代码\\Project\\IServices\\IServices.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\IServices\\IServices.csproj"
+            "E:\\克隆代码3\\IServices\\IServices.csproj": {
+              "projectPath": "E:\\克隆代码3\\IServices\\IServices.csproj"
             }
           }
         }
@@ -353,16 +353,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "读取缓存文件 E:\\资料\\代码\\Project\\Services\\obj\\project.nuget.cache 时遇到问题: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
