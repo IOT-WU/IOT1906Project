@@ -226,23 +226,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wujun\\.nuget\\packages\\": {},
-    "D:\\wujunhao\\VS\\Shared\\NuGetPackages": {}
+    "C:\\Users\\张贺\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj",
+      "projectUniqueName": "C:\\Users\\张贺\\Desktop\\克隆1.2\\DomainDTO\\DomainDTO.csproj",
       "projectName": "DomainDTO",
-      "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj",
-      "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
-      "outputPath": "E:\\资料\\代码\\Project\\DomainDTO\\obj\\",
+      "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\DomainDTO\\DomainDTO.csproj",
+      "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\DomainDTO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\张贺\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -251,6 +253,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\张贺\\Desktop": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -293,7 +296,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }
