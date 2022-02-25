@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "jt1f899+NtMQ8LK3/J0m7aKHMYOnhonlHmqpG7wNZvXsDCs5hzMX/+S/jiUpkn0pHRPw/vVkQBN39e4CI8ANIA==",
+  "dgSpecHash": "u/V3tyczcW7eFzXEo4AUelAfFIwlt4EyvDxGKbYkvlXEeOuZ74I5Xec0LGpJNUChUGRhCWV8qwbFSBTMqKXYfQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj",
+  "projectFilePath": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\张贺\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
-    "C:\\Users\\张贺\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+    "C:\\Users\\wujun\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\wujun\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

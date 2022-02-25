@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Project\\Project.csproj": {}
+    "E:\\资料\\代码\\Project\\Project\\Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj": {
+    "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj",
+        "projectUniqueName": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj",
         "projectName": "DomainDTO",
-        "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj",
-        "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\obj\\",
+        "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj",
+        "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
+        "outputPath": "E:\\资料\\代码\\Project\\DomainDTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\张贺\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\张贺\\Desktop": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,25 +68,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj": {
+    "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj",
+        "projectUniqueName": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj",
         "projectName": "IRepository",
-        "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj",
-        "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\obj\\",
+        "projectPath": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj",
+        "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
+        "outputPath": "E:\\资料\\代码\\Project\\IRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\张贺\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,7 +94,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\张贺\\Desktop": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -136,25 +132,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj": {
+    "E:\\资料\\代码\\Project\\IServices\\IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj",
+        "projectUniqueName": "E:\\资料\\代码\\Project\\IServices\\IServices.csproj",
         "projectName": "IServices",
-        "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj",
-        "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\obj\\",
+        "projectPath": "E:\\资料\\代码\\Project\\IServices\\IServices.csproj",
+        "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
+        "outputPath": "E:\\资料\\代码\\Project\\IServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\张贺\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -163,15 +158,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\张贺\\Desktop": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj"
+              "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj"
               }
             }
           }
@@ -206,25 +200,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj": {
+    "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj",
+        "projectUniqueName": "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj",
         "projectName": "MyDB",
-        "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj",
-        "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\obj\\",
+        "projectPath": "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj",
+        "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
+        "outputPath": "E:\\资料\\代码\\Project\\MyDB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\张贺\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -233,15 +226,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\张贺\\Desktop": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj"
+              "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj"
               }
             }
           }
@@ -259,10 +251,6 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[11.0.1, )"
-            },
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.4.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -300,25 +288,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Project\\Project.csproj": {
+    "E:\\资料\\代码\\Project\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Project\\Project.csproj",
+        "projectUniqueName": "E:\\资料\\代码\\Project\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Project\\obj\\",
+        "projectPath": "E:\\资料\\代码\\Project\\Project\\Project.csproj",
+        "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
+        "outputPath": "E:\\资料\\代码\\Project\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\张贺\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -327,30 +314,29 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\张贺\\Desktop": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj"
+              "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj"
               },
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj"
+              "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj"
               },
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj"
+              "E:\\资料\\代码\\Project\\IServices\\IServices.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\IServices\\IServices.csproj"
               },
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj"
+              "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj"
               },
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Repository\\Repository.csproj"
+              "E:\\资料\\代码\\Project\\Repository\\Repository.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\Repository\\Repository.csproj"
               },
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\Services.csproj"
+              "E:\\资料\\代码\\Project\\Services\\Services.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\Services\\Services.csproj"
               }
             }
           }
@@ -424,25 +410,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Repository\\Repository.csproj": {
+    "E:\\资料\\代码\\Project\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Repository\\Repository.csproj",
+        "projectUniqueName": "E:\\资料\\代码\\Project\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Repository\\obj\\",
+        "projectPath": "E:\\资料\\代码\\Project\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
+        "outputPath": "E:\\资料\\代码\\Project\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\张贺\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -451,18 +436,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\张贺\\Desktop": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj"
+              "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj"
               },
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj"
+              "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj"
               }
             }
           }
@@ -497,25 +481,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\Services.csproj": {
+    "E:\\资料\\代码\\Project\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\Services.csproj",
+        "projectUniqueName": "E:\\资料\\代码\\Project\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\Services.csproj",
-        "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\obj\\",
+        "projectPath": "E:\\资料\\代码\\Project\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
+        "outputPath": "E:\\资料\\代码\\Project\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\张贺\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -524,18 +507,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\张贺\\Desktop": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj"
+              "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj"
               },
-              "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj": {
-                "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj"
+              "E:\\资料\\代码\\Project\\IServices\\IServices.csproj": {
+                "projectPath": "E:\\资料\\代码\\Project\\IServices\\IServices.csproj"
               }
             }
           }
@@ -570,7 +552,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
