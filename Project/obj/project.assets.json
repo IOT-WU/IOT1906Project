@@ -7627,11 +7627,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Project\\Project.csproj",
+      "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Project\\Project.csproj",
+      "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Project\\obj\\",
+      "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -7654,23 +7654,23 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\张贺\\Desktop\\克隆1.2\\DomainDTO\\DomainDTO.csproj": {
-              "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\DomainDTO\\DomainDTO.csproj"
+            "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj": {
+              "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj"
             },
-            "C:\\Users\\张贺\\Desktop\\克隆1.2\\IRepository\\IRepository.csproj": {
-              "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\IRepository\\IRepository.csproj"
+            "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj": {
+              "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj"
             },
-            "C:\\Users\\张贺\\Desktop\\克隆1.2\\IServices\\IServices.csproj": {
-              "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\IServices\\IServices.csproj"
+            "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj": {
+              "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj"
             },
-            "C:\\Users\\张贺\\Desktop\\克隆1.2\\MyDB\\MyDB.csproj": {
-              "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\MyDB\\MyDB.csproj"
+            "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj": {
+              "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj"
             },
-            "C:\\Users\\张贺\\Desktop\\克隆1.2\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Repository\\Repository.csproj"
+            "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Repository\\Repository.csproj"
             },
-            "C:\\Users\\张贺\\Desktop\\克隆1.2\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Services\\Services.csproj"
+            "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\Services.csproj"
             }
           }
         }

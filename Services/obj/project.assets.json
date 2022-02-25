@@ -290,11 +290,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Services\\Services.csproj",
+      "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Services\\obj\\",
+      "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -317,11 +317,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\张贺\\Desktop\\克隆1.2\\IRepository\\IRepository.csproj": {
-              "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\IRepository\\IRepository.csproj"
+            "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj": {
+              "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj"
             },
-            "C:\\Users\\张贺\\Desktop\\克隆1.2\\IServices\\IServices.csproj": {
-              "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\IServices\\IServices.csproj"
+            "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj": {
+              "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IServices\\IServices.csproj"
             }
           }
         }

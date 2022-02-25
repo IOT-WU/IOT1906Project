@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dt9kG7x/h03CEWUP7umaCGVUKwdvmPF7zGvFsy5rtsC5a/cQfDwFNGO5HIAc15xKoiMQ70Bni7GvOMZCozJIjw==",
+  "dgSpecHash": "Gro6GD95SeTNNgvJC3Fho58pl+Z1qZbVdVrhIXuj4vp5T8/6u1gywPLWzXUbLdMBJ7pz2rct9KJ3oeODFMYCng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\DomainDTO\\DomainDTO.csproj",
+  "projectFilePath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\DomainDTO\\DomainDTO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\张贺\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\张贺\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

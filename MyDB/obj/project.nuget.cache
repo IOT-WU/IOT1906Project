@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vNuqiJEJp4j84wjV6ipJ+AbZTGa5uB37mkvBHCTLoU088FrxHtJyL+Q5vioxCp8XQMTL9KbOrzNO3rBZ2w9I6w==",
+  "dgSpecHash": "HUOyRBshIXss4Qq7FtIvE+nRnkYRfk6tz2RFsi4tWR4yRhVYkfJI0XunE2F2iY8il1qUP8LUV4t21iPyHikX+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\MyDB\\MyDB.csproj",
+  "projectFilePath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\MyDB\\MyDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\张贺\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\张贺\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

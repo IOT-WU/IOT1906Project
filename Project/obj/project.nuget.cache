@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "odI+obwd8tXt6ttPAd7t/ScgEbPur+OYGzSwZTuha3DA/ibAw4yjUMLrWXctTgpIOmM89Q1h332M+8k9LmShvA==",
+  "dgSpecHash": "F/FXWQJgpOZXC79HHDOd8eMidk2MUkADHtNIzH6g8RXtkhC5gNyFJ6/uDGS8mb9uqc6zEoWPGM8ST9qNbzAjSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Project\\Project.csproj",
+  "projectFilePath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Project\\Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\张贺\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\张贺\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

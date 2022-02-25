@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ymoAKnlRCJgNkNI/+4RFhLnB5NN/Juyd36yRwWsfJ7IsO0yYN4FtMPzp2sAV1F4qyBxJyshgOjuiimz0oVQuUg==",
+  "dgSpecHash": "x+UzMns0OfjiyoNoZgloxX5PVLIsVKHYRX7wZcjMbfpuQlmHTUsh58jU/6bXuzotKIwA9N4efAxEXwrM12cPSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\Repository\\Repository.csproj",
+  "projectFilePath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\张贺\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\张贺\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

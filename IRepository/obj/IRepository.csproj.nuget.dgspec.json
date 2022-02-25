@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\张贺\\Desktop\\克隆1.2\\IRepository\\IRepository.csproj": {}
+    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\张贺\\Desktop\\克隆1.2\\IRepository\\IRepository.csproj": {
+    "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\张贺\\Desktop\\克隆1.2\\IRepository\\IRepository.csproj",
+        "projectUniqueName": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj",
         "projectName": "IRepository",
-        "projectPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\IRepository\\IRepository.csproj",
+        "projectPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\IRepository.csproj",
         "packagesPath": "C:\\Users\\张贺\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\张贺\\Desktop\\克隆1.2\\IRepository\\obj\\",
+        "outputPath": "C:\\Users\\张贺\\Desktop\\更新框架\\框架1\\IRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
