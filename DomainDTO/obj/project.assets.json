@@ -226,23 +226,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wujun\\.nuget\\packages\\": {},
-    "D:\\wujunhao\\VS\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gyk\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj",
+      "projectUniqueName": "E:\\克隆代码2\\DomainDTO\\DomainDTO.csproj",
       "projectName": "DomainDTO",
-      "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj",
-      "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
-      "outputPath": "E:\\资料\\代码\\Project\\DomainDTO\\obj\\",
+      "projectPath": "E:\\克隆代码2\\DomainDTO\\DomainDTO.csproj",
+      "packagesPath": "C:\\Users\\gyk\\.nuget\\packages\\",
+      "outputPath": "E:\\克隆代码2\\DomainDTO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -293,7 +293,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
