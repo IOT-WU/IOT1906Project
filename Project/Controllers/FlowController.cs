@@ -23,7 +23,7 @@ namespace Project.Controllers
         }
 
         /// <summary>
-        /// 发起流程
+        /// 发起请假流程
         /// </summary>
         /// <param name="leave"></param>
         [HttpPost, Route("api/startleave")]
