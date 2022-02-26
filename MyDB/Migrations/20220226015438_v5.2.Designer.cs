@@ -10,8 +10,8 @@ using MyDB;
 namespace MyDB.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    [Migration("20220224121831_v1.0")]
-    partial class v10
+    [Migration("20220226015438_v5.2")]
+    partial class v52
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,16 +28,34 @@ namespace MyDB.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Day")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("LeaveType")
+                    b.Property<string>("Leave_AffixName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("StartDate")
+                    b.Property<int>("Leave_Day")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Leave_EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Leave_LeaveType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Leave_Position")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Leave_Proposer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Leave_Reason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Leave_Remark")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Leave_StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("Leave_Time")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("TaskId")
