@@ -7940,23 +7940,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wujun\\.nuget\\packages\\": {},
-    "D:\\wujunhao\\VS\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gyk\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\资料\\代码\\Project\\Project\\Project.csproj",
+      "projectUniqueName": "E:\\克隆代码3\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "E:\\资料\\代码\\Project\\Project\\Project.csproj",
-      "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
-      "outputPath": "E:\\资料\\代码\\Project\\Project\\obj\\",
+      "projectPath": "E:\\克隆代码3\\Project\\Project.csproj",
+      "packagesPath": "C:\\Users\\gyk\\.nuget\\packages\\",
+      "outputPath": "E:\\克隆代码3\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7971,23 +7971,23 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj"
+            "E:\\克隆代码3\\DomainDTO\\DomainDTO.csproj": {
+              "projectPath": "E:\\克隆代码3\\DomainDTO\\DomainDTO.csproj"
             },
-            "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj"
+            "E:\\克隆代码3\\IRepository\\IRepository.csproj": {
+              "projectPath": "E:\\克隆代码3\\IRepository\\IRepository.csproj"
             },
-            "E:\\资料\\代码\\Project\\IServices\\IServices.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\IServices\\IServices.csproj"
+            "E:\\克隆代码3\\IServices\\IServices.csproj": {
+              "projectPath": "E:\\克隆代码3\\IServices\\IServices.csproj"
             },
-            "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj"
+            "E:\\克隆代码3\\MyDB\\MyDB.csproj": {
+              "projectPath": "E:\\克隆代码3\\MyDB\\MyDB.csproj"
             },
-            "E:\\资料\\代码\\Project\\Repository\\Repository.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\Repository\\Repository.csproj"
+            "E:\\克隆代码3\\Repository\\Repository.csproj": {
+              "projectPath": "E:\\克隆代码3\\Repository\\Repository.csproj"
             },
-            "E:\\资料\\代码\\Project\\Services\\Services.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\Services\\Services.csproj"
+            "E:\\克隆代码3\\Services\\Services.csproj": {
+              "projectPath": "E:\\克隆代码3\\Services\\Services.csproj"
             }
           }
         }
@@ -8061,7 +8061,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
