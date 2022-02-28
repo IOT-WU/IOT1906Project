@@ -1,9 +1,9 @@
-﻿using BPMAPI.OtherApi;
-using DomainDTO.EFModels;
+﻿using DomainDTO.EFModels;
 using DomainDTO.InPutModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Project.OtherApi;
 using System;
 using System.Data;
 using System.Threading.Tasks;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace Project.Controllers
 {
     [ApiController]
-    public class FlowController :ControllerBase
+    public class FlowController : ControllerBase
     {
         private IConfiguration configuration;
         public FlowController(IConfiguration configuration)
@@ -65,14 +65,13 @@ namespace Project.Controllers
             BPMModels models = new BPMModels(configuration)
             {
                 Action = leaveNew.Action,
-
                 BPMUser = leaveNew.BPMUser,
                 BPMUserPass = leaveNew.BPMUserPass,
                 FormDataSet = formDataSet,
                 FullName = leaveNew.FullName,
                 ProcessName = leaveNew.ProcessName
             };
-            return new MyClientApi().OptClientApi(models.BpmServerUrl, models);
+            return MyClientApi.OptClientApi(models.BpmServerUrl, models);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using BPMAPI.OtherApi;
-using bpmdemoapi.models;
+﻿using DomainDTO.EFModels;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
@@ -12,15 +11,17 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
+using Microsoft.AspNetCore.Mvc;
+using Project.OtherApi;
 
-namespace WebApplication21.Controllers
+namespace Project.Controllers
 {
     public enum IsMaster
     {
         master = 1,
         detail = 2
     }
-    public class BaseController
+    public class BaseController : ControllerBase
     {
         protected DataSet dataSet = new DataSet("FormData");
         private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
@@ -130,8 +131,6 @@ namespace WebApplication21.Controllers
 
         protected Task<int> StartProccess(string formDataSet, BaseModels baseModels)
         {
-
-
             BPMModels models = new BPMModels(configuration)
             {
                 Action = baseModels.Action,
