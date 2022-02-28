@@ -33,9 +33,9 @@ namespace Project.Controllers
         }
 
         [HttpPost, Route("api/startDeparture")]
-        public void startDeparture(Leave leave)
+        public void startDeparture(Departure departure)
         {
-            StartProccess<Leave>(leave);
+            StartProccess<Departure>(departure);
         }
         /// <summary>
         /// 获取table
