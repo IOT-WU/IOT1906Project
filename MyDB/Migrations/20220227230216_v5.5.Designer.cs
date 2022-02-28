@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyDB;
 
 namespace MyDB.Migrations
 {
     [DbContext(typeof(MyDBContext))]
-    partial class MyDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220227230216_v5.5")]
+    partial class v55
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,64 +21,13 @@ namespace MyDB.Migrations
                 .HasAnnotation("ProductVersion", "5.0.13")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-<<<<<<< HEAD
-            modelBuilder.Entity("DomainDTO.EFModels.Resources", b =>
-                {
-                    b.Property<int>("staff_Id")
-=======
             modelBuilder.Entity("DomainDTO.EFModels.Leave", b =>
                 {
                     b.Property<int>("Id")
->>>>>>> f49dbe267183675686e1b965829341a3795d9f86
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-<<<<<<< HEAD
-                    b.Property<int>("TaskId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("staff_Culture")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("staff_Salary")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("staff_age")
-                        .HasColumnType("int");
-
-                    b.Property<string>("staff_application")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("staff_contract")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("staff_department")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("staff_enclosure")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("staff_existing")
-                        .HasColumnType("int");
-
-                    b.Property<string>("staff_explain")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("staff_major")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("staff_name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("staff_other")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("staff_post")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("staff_probation")
-=======
                     b.Property<string>("Leave_AffixName")
                         .HasColumnType("nvarchar(max)");
 
@@ -105,26 +56,11 @@ namespace MyDB.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("Leave_Time")
->>>>>>> f49dbe267183675686e1b965829341a3795d9f86
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("staff_recruit")
+                    b.Property<int>("TaskId")
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-                    b.Property<string>("staff_remarks")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("staff_sex")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("staff_time")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("staff_Id");
-
-                    b.ToTable("Resources");
-=======
                     b.HasKey("Id");
 
                     b.ToTable("Leave");
@@ -146,7 +82,6 @@ namespace MyDB.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("LeaveType");
->>>>>>> f49dbe267183675686e1b965829341a3795d9f86
                 });
 #pragma warning restore 612, 618
         }
