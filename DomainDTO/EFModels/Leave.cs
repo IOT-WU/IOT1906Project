@@ -10,7 +10,7 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 请假申请表
     /// </summary>
-    public class Leave : BaseModels
+    public class Leave
     {
         [Key]
         public int Id { get; set; }
@@ -54,6 +54,6 @@ namespace DomainDTO.EFModels
         /// <summary>
         /// 职位
         /// </summary>
-        public string Leave_Position { get; set; }
+        public string Leave_Demo { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DomainDTO.EFModels;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Project.OtherApi;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,40 +12,33 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
-using Microsoft.AspNetCore.Mvc;
-using Project.OtherApi;
 
 namespace Project.Controllers
 {
-    public enum IsMaster
+    public class BaseController
     {
-        master = 1,
-        detail = 2
-    }
-    public class BaseController : ControllerBase
-    {
-        protected DataSet dataSet = new DataSet("FormData");
-        private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
+        protected  DataSet dataSet = new DataSet("FormData");
+       private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
         private IConfiguration configuration;
         public BaseController(IConfiguration configuration)
         {
             this.configuration = configuration;
         }
-        protected string CollectionToSqlXml<T>(string json, IsMaster isMaster) where T : class, new()
+        protected string CollectionToSqlXml<T>(string json) where T:class,new()
         {
             List<T> TCollection;
-            if (isMaster == IsMaster.master)
-            {
-                TCollection = JsonConvert.DeserializeObject<List<T>>("[" + json + "]");
-            }
-            else
+            if (json.IndexOf("[{") > 0)
             {
                 TCollection = JsonConvert.DeserializeObject<List<T>>(json);
             }
+            else
+            {
+                TCollection = JsonConvert.DeserializeObject<List<T>>("[" + json + "]");
+            }
 
             //先把集合转换成数据表，然后把数据表转换成SQLXML
-            return DataTableToSqlXml(CollectionToDataTable(TCollection)).Value.Replace("<DocumentElement>", "").Replace("</DocumentElement>", "");
-
+            return  DataTableToSqlXml(CollectionToDataTable(TCollection)).Value.Replace("<DocumentElement>", "").Replace("</DocumentElement>", "");
+            
         }
         private DataTable CollectionToDataTable<T>(List<T> TCollection)
         {
@@ -98,46 +92,16 @@ namespace Project.Controllers
             }
             return xml;
         }
-        ///// <summary>
-        ///// 获取table
-        ///// </summary>
-        ///// <param name="data"></param>
-        ///// <returns></returns>
-        //private static DataSet GetDataSet(Object data)
-        //{
-        //    Type type = data.GetType();
-
-        //    DataSet formDataSet = new DataSet("FormData");
-
-        //    DataTable table = new DataTable(type.Name);
-        //    string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName";
-        //    foreach (var property in type.GetProperties())
-        //    {
-
-        //        if (!IsNotField.Contains(property.Name))
-        //            table.Columns.Add(new DataColumn(property.Name, property.PropertyType));
-        //    }
-        //    DataRow add_row = table.NewRow();
-        //    foreach (var property in type.GetProperties())
-        //    {
-        //        if (!IsNotField.Contains(property.Name))
-        //            add_row[property.Name] = property.GetValue(data);
-        //    }
-        //    table.Rows.Add(add_row);
-        //    formDataSet.Tables.Add(table);
-        //    return formDataSet;
-        //}
-
-
-        protected Task<int> StartProccess(string formDataSet, BaseModels baseModels)
+        protected Task<int> StartProccess(string formDataSet, BaseModels baseModels) 
         {
+
+         
             BPMModels models = new BPMModels(configuration)
             {
                 Action = baseModels.Action,
-
                 BPMUser = baseModels.BPMUser,
                 BPMUserPass = baseModels.BPMUserPass,
-                FormDataSet = "<FormData>" + formDataSet + "</FormData>",
+                FormDataSet = "<FormData>"+formDataSet+ "</FormData>",
                 FullName = baseModels.FullName,
                 ProcessName = baseModels.ProcessName
             };
