@@ -117,23 +117,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wujun\\.nuget\\packages\\": {},
-    "D:\\wujunhao\\VS\\Shared\\NuGetPackages": {}
+    "C:\\Users\\苏醒\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj",
+      "projectUniqueName": "D:\\K01\\IRepository\\IRepository.csproj",
       "projectName": "IRepository",
-      "projectPath": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj",
-      "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
-      "outputPath": "E:\\资料\\代码\\Project\\IRepository\\obj\\",
+      "projectPath": "D:\\K01\\IRepository\\IRepository.csproj",
+      "packagesPath": "C:\\Users\\苏醒\\.nuget\\packages\\",
+      "outputPath": "D:\\K01\\IRepository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\苏醒\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
