@@ -2218,7 +2218,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "AutoMapper": "11.0.1"
+          "AutoMapper": "11.0.1",
+          "DomainDTO": "1.0.0"
         },
         "compile": {
           "bin/placeholder/IRepository.dll": {}
@@ -7620,23 +7621,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\wujun\\.nuget\\packages\\": {},
-    "D:\\wujunhao\\VS\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\资料\\代码\\Project\\Project\\Project.csproj",
+      "projectUniqueName": "D:\\项目.net\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "E:\\资料\\代码\\Project\\Project\\Project.csproj",
-      "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
-      "outputPath": "E:\\资料\\代码\\Project\\Project\\obj\\",
+      "projectPath": "D:\\项目.net\\Project\\Project.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "D:\\项目.net\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7651,23 +7654,23 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj"
+            "D:\\项目.net\\DomainDTO\\DomainDTO.csproj": {
+              "projectPath": "D:\\项目.net\\DomainDTO\\DomainDTO.csproj"
             },
-            "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\IRepository\\IRepository.csproj"
+            "D:\\项目.net\\IRepository\\IRepository.csproj": {
+              "projectPath": "D:\\项目.net\\IRepository\\IRepository.csproj"
             },
-            "E:\\资料\\代码\\Project\\IServices\\IServices.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\IServices\\IServices.csproj"
+            "D:\\项目.net\\IServices\\IServices.csproj": {
+              "projectPath": "D:\\项目.net\\IServices\\IServices.csproj"
             },
-            "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\MyDB\\MyDB.csproj"
+            "D:\\项目.net\\MyDB\\MyDB.csproj": {
+              "projectPath": "D:\\项目.net\\MyDB\\MyDB.csproj"
             },
-            "E:\\资料\\代码\\Project\\Repository\\Repository.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\Repository\\Repository.csproj"
+            "D:\\项目.net\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\项目.net\\Repository\\Repository.csproj"
             },
-            "E:\\资料\\代码\\Project\\Services\\Services.csproj": {
-              "projectPath": "E:\\资料\\代码\\Project\\Services\\Services.csproj"
+            "D:\\项目.net\\Services\\Services.csproj": {
+              "projectPath": "D:\\项目.net\\Services\\Services.csproj"
             }
           }
         }
@@ -7741,16 +7744,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "读取缓存文件 E:\\资料\\代码\\Project\\Project\\obj\\project.nuget.cache 时遇到问题: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

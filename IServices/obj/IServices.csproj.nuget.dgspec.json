@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\资料\\代码\\Project\\IServices\\IServices.csproj": {}
+    "D:\\项目.net\\IServices\\IServices.csproj": {}
   },
   "projects": {
-    "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj": {
+    "D:\\项目.net\\DomainDTO\\DomainDTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj",
+        "projectUniqueName": "D:\\项目.net\\DomainDTO\\DomainDTO.csproj",
         "projectName": "DomainDTO",
-        "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj",
-        "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
-        "outputPath": "E:\\资料\\代码\\Project\\DomainDTO\\obj\\",
+        "projectPath": "D:\\项目.net\\DomainDTO\\DomainDTO.csproj",
+        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\项目.net\\DomainDTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,24 +69,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\资料\\代码\\Project\\IServices\\IServices.csproj": {
+    "D:\\项目.net\\IServices\\IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\资料\\代码\\Project\\IServices\\IServices.csproj",
+        "projectUniqueName": "D:\\项目.net\\IServices\\IServices.csproj",
         "projectName": "IServices",
-        "projectPath": "E:\\资料\\代码\\Project\\IServices\\IServices.csproj",
-        "packagesPath": "C:\\Users\\wujun\\.nuget\\packages\\",
-        "outputPath": "E:\\资料\\代码\\Project\\IServices\\obj\\",
+        "projectPath": "D:\\项目.net\\IServices\\IServices.csproj",
+        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\项目.net\\IServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\wujunhao\\VS\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\wujun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -100,8 +102,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj": {
-                "projectPath": "E:\\资料\\代码\\Project\\DomainDTO\\DomainDTO.csproj"
+              "D:\\项目.net\\DomainDTO\\DomainDTO.csproj": {
+                "projectPath": "D:\\项目.net\\DomainDTO\\DomainDTO.csproj"
               }
             }
           }
@@ -136,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

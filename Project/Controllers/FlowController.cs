@@ -31,6 +31,11 @@ namespace Project.Controllers
         {
             StartProccess<Leave>(leave);
         }
+        [HttpPost, Route("api/startResources")]
+        public void StartLeave(Resources resources)
+        {
+            StartProccess<Resources>(resources);
+        }
         /// <summary>
         /// 获取table
         /// </summary>

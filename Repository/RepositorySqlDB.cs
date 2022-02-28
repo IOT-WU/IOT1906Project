@@ -1,4 +1,5 @@
-﻿using IRepository;
+﻿using DomainDTO.EFModels;
+using IRepository;
 using MyDB;
 using System;
 using System.Collections.Generic;
@@ -75,5 +76,6 @@ namespace Repository
             var list = db.Set<T>().AsQueryable().Where(exception).ToList();
             return list;
         }
+      
     }
 }
