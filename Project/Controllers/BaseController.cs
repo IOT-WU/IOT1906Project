@@ -17,14 +17,14 @@ namespace Project.Controllers
 {
     public class BaseController
     {
-        protected  DataSet dataSet = new DataSet("FormData");
-       private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
+        protected DataSet dataSet = new DataSet("FormData");
+        private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
         private IConfiguration configuration;
         public BaseController(IConfiguration configuration)
         {
             this.configuration = configuration;
         }
-        protected string CollectionToSqlXml<T>(string json) where T:class,new()
+        protected string CollectionToSqlXml<T>(string json) where T : class, new()
         {
             List<T> TCollection;
             if (json.IndexOf("[{") > 0)
@@ -37,8 +37,8 @@ namespace Project.Controllers
             }
 
             //先把集合转换成数据表，然后把数据表转换成SQLXML
-            return  DataTableToSqlXml(CollectionToDataTable(TCollection)).Value.Replace("<DocumentElement>", "").Replace("</DocumentElement>", "");
-            
+            return DataTableToSqlXml(CollectionToDataTable(TCollection)).Value.Replace("<DocumentElement>", "").Replace("</DocumentElement>", "");
+
         }
         private DataTable CollectionToDataTable<T>(List<T> TCollection)
         {
@@ -92,16 +92,16 @@ namespace Project.Controllers
             }
             return xml;
         }
-        protected Task<int> StartProccess(string formDataSet, BaseModels baseModels) 
+        protected Task<int> StartProccess(string formDataSet, BaseModels baseModels)
         {
 
-         
+
             BPMModels models = new BPMModels(configuration)
             {
                 Action = baseModels.Action,
                 BPMUser = baseModels.BPMUser,
                 BPMUserPass = baseModels.BPMUserPass,
-                FormDataSet = "<FormData>"+formDataSet+ "</FormData>",
+                FormDataSet = "<FormData>" + formDataSet + "</FormData>",
                 FullName = baseModels.FullName,
                 ProcessName = baseModels.ProcessName
             };
