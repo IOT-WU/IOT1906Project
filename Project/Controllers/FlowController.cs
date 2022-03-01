@@ -95,6 +95,7 @@ namespace Project.Controllers
         /// 采购申请流程
         /// </summary>
         /// <param name="plan"></param>
+        [HttpPost, Route("api/stratProcurement")]
         public void stratProcurement(ProcurementTransfer plan)
         {
             var xml = CollectionToSqlXml<Procurement>(plan.ProcurementData);
@@ -114,13 +115,6 @@ namespace Project.Controllers
             var xmll1 = CollectionToSqlXml<ReceptionTripDetails>(plan.ReceptionTripDetailsDetail);
 
             StartProccess(xml + xml1 + xmll1, plan);
-                BPMUser = leaveNew.BPMUser,
-                BPMUserPass = leaveNew.BPMUserPass,
-                FormDataSet = formDataSet,
-                FullName = leaveNew.FullName,
-                ProcessName = leaveNew.ProcessName
-            };
-            return  MyClientApi.OptClientApi(models.BpmServerUrl, models);
         }
     }
 }
