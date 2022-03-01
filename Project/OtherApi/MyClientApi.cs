@@ -10,7 +10,7 @@ namespace BPMAPI.OtherApi
 {
     public class MyClientApi
     {
-        public  async Task<int> OptClientApi(string webapiUrl,BPMModels models)
+        public static  async Task<int> OptClientApi(string webapiUrl,BPMModels models)
         {
             var httpResponseMsg = new HttpResponseMessage();
 

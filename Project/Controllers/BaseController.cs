@@ -1,5 +1,6 @@
 ﻿using BPMAPI.OtherApi;
 using bpmdemoapi.models;
+using DomainDTO.EFModels;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
@@ -13,37 +14,34 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace WebApplication21.Controllers
+namespace Api.Controllers
 {
-    public enum IsMaster
-    {
-        master = 1,
-        detail = 2
-    }
+   
     public class BaseController
     {
-        protected DataSet dataSet = new DataSet("FormData");
-        private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
+        protected  DataSet dataSet = new DataSet("FormData");
+       private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
         private IConfiguration configuration;
         public BaseController(IConfiguration configuration)
         {
             this.configuration = configuration;
         }
-        protected string CollectionToSqlXml<T>(string json, IsMaster isMaster) where T : class, new()
+        protected string CollectionToSqlXml<T>(string json) where T:class,new()
         {
             List<T> TCollection;
-            if (isMaster == IsMaster.master)
-            {
-                TCollection = JsonConvert.DeserializeObject<List<T>>("[" + json + "]");
-            }
-            else
+            if (json.IndexOf("[{") >= 0)
             {
                 TCollection = JsonConvert.DeserializeObject<List<T>>(json);
             }
+            
+            else
+            {
+                TCollection = JsonConvert.DeserializeObject<List<T>>("[" + json + "]");
+            }
 
             //先把集合转换成数据表，然后把数据表转换成SQLXML
-            return DataTableToSqlXml(CollectionToDataTable(TCollection)).Value.Replace("<DocumentElement>", "").Replace("</DocumentElement>", "");
-
+            return  DataTableToSqlXml(CollectionToDataTable(TCollection)).Value.Replace("<DocumentElement>", "").Replace("</DocumentElement>", "");
+            
         }
         private DataTable CollectionToDataTable<T>(List<T> TCollection)
         {
@@ -127,18 +125,18 @@ namespace WebApplication21.Controllers
         //    return formDataSet;
         //}
 
-
-        protected Task<int> StartProccess(string formDataSet, BaseModels baseModels)
+       
+        protected Task<int> StartProccess(string formDataSet, bpmdemoapi.models.BaseModels baseModels) 
         {
 
-
+         
             BPMModels models = new BPMModels(configuration)
             {
                 Action = baseModels.Action,
 
                 BPMUser = baseModels.BPMUser,
                 BPMUserPass = baseModels.BPMUserPass,
-                FormDataSet = "<FormData>" + formDataSet + "</FormData>",
+                FormDataSet = "<FormData>"+formDataSet+ "</FormData>",
                 FullName = baseModels.FullName,
                 ProcessName = baseModels.ProcessName
             };

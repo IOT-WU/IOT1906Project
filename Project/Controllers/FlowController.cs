@@ -37,6 +37,8 @@ namespace Project.Controllers
         {
             StartProccess<Departure>(departure);
         }
+
+
         /// <summary>
         /// 获取table
         /// </summary>
@@ -78,7 +80,7 @@ namespace Project.Controllers
                 FullName = leaveNew.FullName,
                 ProcessName = leaveNew.ProcessName
             };
-            return new MyClientApi().OptClientApi(models.BpmServerUrl, models);
+            return  MyClientApi.OptClientApi(models.BpmServerUrl, models);
         }
     }
 }
