@@ -6,11 +6,11 @@ using System.Net.Http;
 using System.Net.Http.Formatting;
 using System.Threading.Tasks;
 
-namespace BPMAPI.OtherApi
+namespace Project.OtherApi
 {
-    public class MyClientApi
+    public static class MyClientApi
     {
-        public static  async Task<int> OptClientApi(string webapiUrl,BPMModels models)
+        public static async Task<int> OptClientApi(string webapiUrl,BPMModels models)
         {
             var httpResponseMsg = new HttpResponseMessage();
 

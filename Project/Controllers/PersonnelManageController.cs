@@ -1,5 +1,4 @@
-﻿using Api.Controllers;
-using DomainDTO.EFModels;
+﻿using DomainDTO.EFModels;
 using DomainDTO.InPutModels;
 using IServices;
 using Microsoft.AspNetCore.Http;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DomainDTO.EFModels
 {
-    public class Departure:BaseModels
+    public class Departure
     {
         [Key]
         public int Departure_Id { get; set; }
