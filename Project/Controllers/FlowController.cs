@@ -4,6 +4,7 @@ using IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Project.OtherApi;
 using System;
 using System.Collections.Generic;
@@ -55,7 +56,29 @@ namespace Project.Controllers
         public void startDeparture(BPMDeparture departure)
         {
             var xml = CollectionToSqlXml<Departure>(departure.DepartureData);
-            StartProccess(xml,departure);
+            StartProccess(xml, departure);
+        }
+
+        /// <summary>
+        /// 离职交接流程
+        /// </summary>
+        /// <param name="departure"></param>
+        [HttpPost, Route("api/startDeparturetTransfer")]
+        public void startDeparturetTransfer(BPMDeparturetTransfer departure)
+        {
+            var xml = CollectionToSqlXml<DeparturetTransfer>(departure.DeparturetTransferData);
+            StartProccess(xml, departure);
+        }
+
+        /// <summary>
+        /// 用车申请流程
+        /// </summary>
+        /// <param name="departure"></param>
+        [HttpPost, Route("api/startCarApplication")]
+        public void startCarApplication(BPMCarApplication carApplication)
+        {
+            var xml = CollectionToSqlXml<CarApplication>(carApplication.CarApplicationData);
+            StartProccess(xml, carApplication);
         }
         /// <summary>
         /// 采购申请流程
