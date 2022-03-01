@@ -57,5 +57,29 @@ namespace Project.Controllers
             var xml = CollectionToSqlXml<Departure>(departure.DepartureData);
             StartProccess(xml,departure);
         }
+        /// <summary>
+        /// 采购申请流程
+        /// </summary>
+        /// <param name="plan"></param>
+        public void stratProcurement(ProcurementTransfer plan)
+        {
+            var xml = CollectionToSqlXml<Procurement>(plan.ProcurementData);
+            var xml1 = CollectionToSqlXml<ProcurementDetails>(plan.ProcurementDetailsDetail);
+
+            StartProccess(xml + xml1, plan);
+        }
+        /// <summary>
+        /// 接待申请流程
+        /// </summary>
+        /// <param name="plan"></param>
+        [HttpPost, Route("api/stratReception")]
+        public void stratReception(ReceptionTransfer plan)
+        {
+            var xml = CollectionToSqlXml<Reception>(plan.ReceptionData);
+            var xml1 = CollectionToSqlXml<ReceptionItemsDetails>(plan.ReceptionItemsDetailsDetail);
+            var xmll1 = CollectionToSqlXml<ReceptionTripDetails>(plan.ReceptionTripDetailsDetail);
+
+            StartProccess(xml + xml1 + xmll1, plan);
+        }
     }
 }
