@@ -1,30 +1,30 @@
-﻿using DomainDTO.EFModels;
+﻿
+using DomainDTO.EFModels;
+using DomainDTO.InPutModels;
 using IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace Project.Controllers
 {
     [ApiController]
-    public class PersonnelManageController : ControllerBase
+    public class PersonnelManageController : BaseController
     {
-        private readonly IAnnualServices AnnualServices;
-
-        public PersonnelManageController(IAnnualServices AnnualServices)
+        public PersonnelManageController(IConfiguration configuration) : base(configuration)
         {
-            this.AnnualServices = AnnualServices;
+        }
+        [HttpPost, Route("api/Startemployed")]
+        public void Startemployed(InputPlanAll palnall)
+        {
+            var Employe = CollectionToSqlXml<Employe>(palnall.PlanData);
+            var Relati = CollectionToSqlXml<Relati>(palnall.PlanInfoDetail);
+            StartProccess(Employe + Relati, palnall);
+
         }
 
-        /// <summary>
-        /// 年度招聘添加
-        /// </summary>
-        /// <param name="information"></param>
-        /// <returns></returns>
-        [HttpPost, Route("api/Annualadd")]
-        public IActionResult Annualadd([FromBody] Annual_information information)
-        {
-            var list = AnnualServices.Annual_add(information);
-            return Ok(list);
-        }
+
+
+
     }
 }

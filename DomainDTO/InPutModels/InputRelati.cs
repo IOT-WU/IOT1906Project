@@ -5,14 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainDTO.EFModels
+namespace DomainDTO.InPutModels
 {
-    /// <summary>
-    /// 员工亲属详细信息
-    /// </summary>
-    public class Relative
+    public class InputRelati
     {
-        [Key]
+       
         /// <summary>
         /// 员工亲属id
         /// </summary>
@@ -30,5 +27,9 @@ namespace DomainDTO.EFModels
         /// 亲属在公司任何部门工作、任何职务
         /// </summary>
         public string Relative_Position { get; set; }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Relative_Note { get; set; }
     }
 }
