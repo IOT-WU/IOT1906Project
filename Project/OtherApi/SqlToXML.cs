@@ -1,47 +1,22 @@
-﻿using DomainDTO.EFModels;
-using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using Project.OtherApi;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlTypes;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using System.Text;
 using System.Xml;
 
-namespace Project.Controllers
+namespace Shopping.EF.SqlXML
 {
-    public class BaseController
+   public  class SqlToXML
     {
-        protected  DataSet dataSet = new DataSet("FormData");
-       private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
-        private IConfiguration configuration;
-        public BaseController(IConfiguration configuration)
+        protected  string CollectionToSqlXml<T>(List<T> TCollection)
         {
-            this.configuration = configuration;
-        }
-        protected string CollectionToSqlXml<T>(string json) where T : class, new()
-        {
-            List<T> TCollection;
-            if (json.IndexOf("[{") > 0)
-            {
-                TCollection = JsonConvert.DeserializeObject<List<T>>(json);
-            }
-            
-            else
-            {
-                TCollection = JsonConvert.DeserializeObject<List<T>>("[" + json + "]");
-            }
-
             //先把集合转换成数据表，然后把数据表转换成SQLXML
-            return  DataTableToSqlXml(CollectionToDataTable(TCollection)).Value.Replace("<DocumentElement>", "").Replace("</DocumentElement>", "");
-            
+            return DataTableToSqlXml(CollectionToDataTable(TCollection)).Value.Replace("<DocumentElement>", "").Replace("</DocumentElement>", "");
         }
-        private DataTable CollectionToDataTable<T>(List<T> TCollection)
+        private  DataTable CollectionToDataTable<T>(List<T> TCollection)
         {
             //获取泛型的具体类型
             Type type = typeof(T);
@@ -75,7 +50,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="table">数据表</param>
         /// <returns></returns>
-        private SqlXml DataTableToSqlXml(DataTable table)
+        private  SqlXml DataTableToSqlXml(DataTable table)
         {
             SqlXml xml;
             //如果表格名为空，则设置表格名
@@ -92,21 +67,6 @@ namespace Project.Controllers
                 xml = new SqlXml(XmlReader.Create(ms));
             }
             return xml;
-        }
-        protected Task<int> StartProccess(string formDataSet, BaseModels baseModels)
-        {
-
-         
-            BPMModels models = new BPMModels(configuration)
-            {
-                Action = baseModels.Action,
-                BPMUser = baseModels.BPMUser,
-                BPMUserPass = baseModels.BPMUserPass,
-                FormDataSet = "<FormData>"+formDataSet+ "</FormData>",
-                FullName = baseModels.FullName,
-                ProcessName = baseModels.ProcessName
-            };
-            return MyClientApi.OptClientApi(models.BpmServerUrl, models);
         }
     }
 }
