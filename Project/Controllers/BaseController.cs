@@ -3,6 +3,7 @@ using bpmdemoapi.models;
 using DomainDTO.EFModels;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Project.OtherApi;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,7 +15,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Api.Controllers
+namespace Project.Controllers
 {
    
     public class BaseController
@@ -26,10 +27,10 @@ namespace Api.Controllers
         {
             this.configuration = configuration;
         }
-        protected string CollectionToSqlXml<T>(string json) where T:class,new()
+        protected string CollectionToSqlXml<T>(string json) where T : class, new()
         {
             List<T> TCollection;
-            if (json.IndexOf("[{") >= 0)
+            if (json.IndexOf("[{") > 0)
             {
                 TCollection = JsonConvert.DeserializeObject<List<T>>(json);
             }
@@ -95,38 +96,7 @@ namespace Api.Controllers
             }
             return xml;
         }
-        ///// <summary>
-        ///// 获取table
-        ///// </summary>
-        ///// <param name="data"></param>
-        ///// <returns></returns>
-        //private static DataSet GetDataSet(Object data)
-        //{
-        //    Type type = data.GetType();
-
-        //    DataSet formDataSet = new DataSet("FormData");
-
-        //    DataTable table = new DataTable(type.Name);
-        //    string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName";
-        //    foreach (var property in type.GetProperties())
-        //    {
-
-        //        if (!IsNotField.Contains(property.Name))
-        //            table.Columns.Add(new DataColumn(property.Name, property.PropertyType));
-        //    }
-        //    DataRow add_row = table.NewRow();
-        //    foreach (var property in type.GetProperties())
-        //    {
-        //        if (!IsNotField.Contains(property.Name))
-        //            add_row[property.Name] = property.GetValue(data);
-        //    }
-        //    table.Rows.Add(add_row);
-        //    formDataSet.Tables.Add(table);
-        //    return formDataSet;
-        //}
-
-       
-        protected Task<int> StartProccess(string formDataSet, bpmdemoapi.models.BaseModels baseModels) 
+        protected Task<int> StartProccess(string formDataSet, BaseModels baseModels)
         {
 
          

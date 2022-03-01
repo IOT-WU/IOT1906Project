@@ -1,10 +1,13 @@
-﻿using BPMAPI.OtherApi;
-using DomainDTO.EFModels;
+﻿using DomainDTO.EFModels;
 using DomainDTO.InPutModels;
+using IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using Project.OtherApi;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 
@@ -14,23 +17,38 @@ using System.Threading.Tasks;
 namespace Project.Controllers
 {
     [ApiController]
-    public class FlowController :ControllerBase
+    public class FlowController : BaseController
     {
         private IConfiguration configuration;
-        public FlowController(IConfiguration configuration)
+        private ILeaveServices leaveServices;
+        public FlowController(IConfiguration configuration, ILeaveServices leaveServices) : base(configuration)
         {
             this.configuration = configuration;
+            this.leaveServices = leaveServices;
         }
 
+        /// <summary>
+        /// 获取请假类型
+        /// 发起请假流程
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet,Route("api/GetLeaveType")]
+        public List<LeaveType> GetLeaveType()
+        {
+            var ls = leaveServices.GetLeaveTypeList();
+            return ls;
+        }
         /// <summary>
         /// 发起请假流程
         /// </summary>
         /// <param name="leave"></param>
         [HttpPost, Route("api/startleave")]
-        public void StartLeave(Leave leave)
+        public void StartLeave(BPMLeaveModels leave)
         {
-            StartProccess<Leave>(leave);
+            var xml = CollectionToSqlXml<Leave>(leave.LeaveData);
+            StartProccess(xml,leave);
         }
+
 
         /// <summary>
         /// 发起年度招聘流程
@@ -42,40 +60,60 @@ namespace Project.Controllers
             //StartProccess<Annual_information>(employe);
         }
         /// <summary>
-        /// 获取table
+        /// 离职申请流程
         /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        private DataSet GetDataSet(Object data)
+        /// <param name="departure"></param>
+        [HttpPost, Route("api/startDeparture")]
+        public void startDeparture(BPMDeparture departure)
         {
-            Type type = data.GetType();
-            DataSet formDataSet = new DataSet("FormData");
-
-            DataTable table = new DataTable(type.Name);
-            string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName";
-            foreach (var property in type.GetProperties())
-            {
-                if (!IsNotField.Contains(property.Name))
-                    table.Columns.Add(new DataColumn(property.Name, property.PropertyType));
-            }
-            DataRow add_row = table.NewRow();
-            foreach (var property in type.GetProperties())
-            {
-                if (!IsNotField.Contains(property.Name))
-                    add_row[property.Name] = property.GetValue(data);
-            }
-            table.Rows.Add(add_row);
-            formDataSet.Tables.Add(table);
-            return formDataSet;
+            var xml = CollectionToSqlXml<Departure>(departure.DepartureData);
+            StartProccess(xml, departure);
         }
-        //
-        private Task<int> StartProccess<T>(T leaveNew) where T : BaseModels, new()
-        {
-            string formDataSet = ConvertXML.ConvertDataSetToXML(GetDataSet(leaveNew));
-            BPMModels models = new BPMModels(configuration)
-            {
-                Action = leaveNew.Action,
 
+        /// <summary>
+        /// 离职交接流程
+        /// </summary>
+        /// <param name="departure"></param>
+        [HttpPost, Route("api/startDeparturetTransfer")]
+        public void startDeparturetTransfer(BPMDeparturetTransfer departure)
+        {
+            var xml = CollectionToSqlXml<DeparturetTransfer>(departure.DeparturetTransferData);
+            StartProccess(xml, departure);
+        }
+
+        /// <summary>
+        /// 用车申请流程
+        /// </summary>
+        /// <param name="departure"></param>
+        [HttpPost, Route("api/startCarApplication")]
+        public void startCarApplication(BPMCarApplication carApplication)
+        {
+            var xml = CollectionToSqlXml<CarApplication>(carApplication.CarApplicationData);
+            StartProccess(xml, carApplication);
+        }
+        /// <summary>
+        /// 采购申请流程
+        /// </summary>
+        /// <param name="plan"></param>
+        public void stratProcurement(ProcurementTransfer plan)
+        {
+            var xml = CollectionToSqlXml<Procurement>(plan.ProcurementData);
+            var xml1 = CollectionToSqlXml<ProcurementDetails>(plan.ProcurementDetailsDetail);
+
+            StartProccess(xml + xml1, plan);
+        }
+        /// <summary>
+        /// 接待申请流程
+        /// </summary>
+        /// <param name="plan"></param>
+        [HttpPost, Route("api/stratReception")]
+        public void stratReception(ReceptionTransfer plan)
+        {
+            var xml = CollectionToSqlXml<Reception>(plan.ReceptionData);
+            var xml1 = CollectionToSqlXml<ReceptionItemsDetails>(plan.ReceptionItemsDetailsDetail);
+            var xmll1 = CollectionToSqlXml<ReceptionTripDetails>(plan.ReceptionTripDetailsDetail);
+
+            StartProccess(xml + xml1 + xmll1, plan);
                 BPMUser = leaveNew.BPMUser,
                 BPMUserPass = leaveNew.BPMUserPass,
                 FormDataSet = formDataSet,
