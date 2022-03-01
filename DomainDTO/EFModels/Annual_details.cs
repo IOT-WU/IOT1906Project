@@ -16,7 +16,7 @@ namespace DomainDTO.EFModels
         /// <summary>
         /// 年度详情信息表主键（不可修改）
         /// </summary>
-        public int Did { get; set; }
+        public int Annual_Did { get; set; }
 
         /// <summary>
         /// 
@@ -101,5 +101,7 @@ namespace DomainDTO.EFModels
         /// 备注-可修改
         /// </summary>
         public string Annual_note { get; set; }
+        
+      
     }
 }

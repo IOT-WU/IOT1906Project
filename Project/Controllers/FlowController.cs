@@ -23,13 +23,23 @@ namespace Project.Controllers
         }
 
         /// <summary>
-        /// 发起流程
+        /// 发起请假流程
         /// </summary>
         /// <param name="leave"></param>
         [HttpPost, Route("api/startleave")]
         public void StartLeave(Leave leave)
         {
             StartProccess<Leave>(leave);
+        }
+
+        /// <summary>
+        /// 发起年度招聘流程
+        /// </summary>
+        /// <param name="employe"></param>
+        [HttpPost, Route("api/startEmploy")]
+        public void StartLeave(Annual_information employe)
+        {
+            //StartProccess<Annual_information>(employe);
         }
         /// <summary>
         /// 获取table
@@ -72,7 +82,7 @@ namespace Project.Controllers
                 FullName = leaveNew.FullName,
                 ProcessName = leaveNew.ProcessName
             };
-            return new MyClientApi().OptClientApi(models.BpmServerUrl, models);
+            return  MyClientApi.OptClientApi(models.BpmServerUrl, models);
         }
     }
 }
