@@ -31,7 +31,7 @@ namespace Project.Controllers
         /// 获取请假类型
         /// </summary>
         /// <returns></returns>
-        [HttpGet, Route("api/GetLeaveType")]
+        [HttpGet,Route("api/GetLeaveType")]
         public List<LeaveType> GetLeaveType()
         {
             var ls = leaveServices.GetLeaveTypeList();
@@ -45,7 +45,7 @@ namespace Project.Controllers
         public void StartLeave(BPMLeaveModels leave)
         {
             var xml = CollectionToSqlXml<Leave>(leave.LeaveData);
-            StartProccess(xml, leave);
+            StartProccess(xml,leave);
         }
 
         /// <summary>
@@ -84,23 +84,12 @@ namespace Project.Controllers
         /// 采购申请流程
         /// </summary>
         /// <param name="plan"></param>
-        [HttpPost, Route("api/stratProcurement")]
         public void stratProcurement(ProcurementTransfer plan)
         {
             var xml = CollectionToSqlXml<Procurement>(plan.ProcurementData);
             var xml1 = CollectionToSqlXml<ProcurementDetails>(plan.ProcurementDetailsDetail);
 
             StartProccess(xml + xml1, plan);
-        }
-        [HttpPost, Route("api/qweqeq")]
-        public string eqwsadda(Procurement plan)
-        {
-            return JsonConvert.SerializeObject(plan);
-        }
-        [HttpPost, Route("api/asfsdf")]
-        public string eqwagsadda(ProcurementDetails asd)
-        {
-            return JsonConvert.SerializeObject(asd);
         }
         /// <summary>
         /// 接待申请流程

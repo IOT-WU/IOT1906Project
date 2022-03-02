@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +10,6 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 请假申请表
     /// </summary>
-
     public class Leave
     {
         [Key]

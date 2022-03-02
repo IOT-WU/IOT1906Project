@@ -11,6 +11,7 @@ namespace DomainDTO.EFModels
     {
         [Key]
         public int MeetingRoom_Id { get; set; }
+        public int TaskId { get; set; }
         /// <summary>
         /// 会议室名称
         /// </summary>
