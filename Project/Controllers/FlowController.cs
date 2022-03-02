@@ -19,11 +19,9 @@ namespace Project.Controllers
     [ApiController]
     public class FlowController : BaseController
     {
-        private IConfiguration configuration;
         private ILeaveServices leaveServices;
         public FlowController(IConfiguration configuration, ILeaveServices leaveServices) : base(configuration)
         {
-            this.configuration = configuration;
             this.leaveServices = leaveServices;
         }
 
@@ -47,7 +45,15 @@ namespace Project.Controllers
             var xml = CollectionToSqlXml<Leave>(leave.LeaveData);
             StartProccess(xml,leave);
         }
-
+        /// <summary>
+        /// 发起年度招聘流程
+        /// </summary>
+        /// <param name="employe"></param>
+        [HttpPost, Route("api/startEmploy")]
+        public void StartLeave(Annual_information employe)
+        {
+            //StartProccess<Annual_information>(employe);
+        }
         /// <summary>
         /// 离职申请流程
         /// </summary>
@@ -84,6 +90,7 @@ namespace Project.Controllers
         /// 采购申请流程
         /// </summary>
         /// <param name="plan"></param>
+        [HttpPost, Route("api/stratProcurement")]
         public void stratProcurement(ProcurementTransfer plan)
         {
             var xml = CollectionToSqlXml<Procurement>(plan.ProcurementData);
