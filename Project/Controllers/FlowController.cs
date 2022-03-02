@@ -19,17 +19,14 @@ namespace Project.Controllers
     [ApiController]
     public class FlowController : BaseController
     {
-        private IConfiguration configuration;
         private ILeaveServices leaveServices;
         public FlowController(IConfiguration configuration, ILeaveServices leaveServices) : base(configuration)
         {
-            this.configuration = configuration;
             this.leaveServices = leaveServices;
         }
 
         /// <summary>
         /// 获取请假类型
-        /// 发起请假流程
         /// </summary>
         /// <returns></returns>
         [HttpGet,Route("api/GetLeaveType")]
@@ -48,8 +45,6 @@ namespace Project.Controllers
             var xml = CollectionToSqlXml<Leave>(leave.LeaveData);
             StartProccess(xml,leave);
         }
-
-
         /// <summary>
         /// 发起年度招聘流程
         /// </summary>
