@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,12 @@ namespace DomainDTO.EFModels
 {
    public class MInsurance
     {
+        /// <summary>
+        /// 车辆保险纪录表
+        /// </summary>
         [Key]
         public int car_AId { get; set; }
-        public int TaskId { get; set; }
+       
         /// <summary>
         /// 经办人
         /// </summary>
@@ -38,7 +42,7 @@ namespace DomainDTO.EFModels
         /// <summary>
         /// 保险金额
         /// </summary>
-        public decimal car_money { get; set; }
+        public string car_money { get; set; }
         /// <summary>
         /// 乘客险
         /// </summary>

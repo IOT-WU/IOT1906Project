@@ -9,9 +9,11 @@ namespace DomainDTO.EFModels
 {
    public class Maintain
     {
+        /// <summary>
+        /// 车辆保养记录表
+        /// </summary>
         [Key]
         public int vehicle_BId { get; set; }
-        public int TaskId { get; set; }
         /// <summary>
         /// 经办人
         /// </summary>

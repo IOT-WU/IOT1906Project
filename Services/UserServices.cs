@@ -10,12 +10,18 @@ namespace Services
     public class UserServices : IUserServices
     {
         private readonly IRepositoryDB<BPMSysUsers> repositoryLogin;
+       
         //private readonly IMapper mapper;
         public UserServices(IRepositoryDB<BPMSysUsers> repositoryLogin/*, IMapper mapper*/)
         {
             this.repositoryLogin = repositoryLogin;
             //this.mapper = mapper;
         }
+
+       
+
+
+
 
         /// <summary>
         /// 用户登录
