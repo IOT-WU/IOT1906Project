@@ -10,13 +10,13 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 年度基础信息表
     /// </summary>
-    public class Annual_information
+    public class Annual_information :BaseModels
     {
         [Key]
         /// <summary>
         /// 年度基础信息表主键（不可修改）
         /// </summary>
-        public int Fid { get; set; }
+        public int Annual_Fid { get; set; }
 
         /// <summary>
         /// 
@@ -42,5 +42,10 @@ namespace DomainDTO.EFModels
         /// 制表年份-可填写
         /// </summary>
         public DateTime TAB_year { get; set; }
+
+        /// <summary>
+        /// 子表的字符串
+        /// </summary>
+        public string Annual_detailsDetail { get; set; }
     }
 }
