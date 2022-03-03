@@ -10,6 +10,8 @@ namespace MyDB
         public MyDBContext(DbContextOptions<MyDBContext> options) : base(options) { }
         public DbSet<Leave> Leave { get; set; } //请假流程申请表
         public DbSet<BPMSysUsers> BPMSysUsers { get; set; } //用户信息表
+        public DbSet<BPMInstTasks> BPMInstTasks { get; set; } //流程表
+        public DbSet<BPMInstProcSteps> BPMInstProcSteps { get; set; } //流程状态表
         public DbSet<Annual_information> Annual_information { get; set; } //年度基础信息表
         public DbSet<Annual_details> Annual_details { get; set; } //年度详情信息表
         public DbSet<Chapter_information> Chapter_information { get; set; } //用章申请表
