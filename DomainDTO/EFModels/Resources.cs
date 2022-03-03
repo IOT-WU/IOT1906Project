@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DomainDTO.EFModels
 {
-   public class Resources :BaseModels
+   public class Resources : BaseModels
     {
         /// <summary>
         /// 人力资源需求申请单

@@ -46,15 +46,6 @@ namespace Project.Controllers
             StartProccess(xml,leave);
         }
         /// <summary>
-        /// 发起年度招聘流程
-        /// </summary>
-        /// <param name="employe"></param>
-        [HttpPost, Route("api/startEmploy")]
-        public void StartLeave(Annual_information employe)
-        {
-            //StartProccess<Annual_information>(employe);
-        }
-        /// <summary>
         /// 离职申请流程
         /// </summary>
         /// <param name="departure"></param>

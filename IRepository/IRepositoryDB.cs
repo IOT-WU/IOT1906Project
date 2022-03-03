@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomainDTO.EFModels;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
