@@ -10,7 +10,7 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 员工录入核定表
     /// </summary>
-    public class Employed
+    public class Employe
     {
         [Key]
         /// <summary>

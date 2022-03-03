@@ -44,6 +44,36 @@ namespace IServices
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Employed staff(int id);
+        public Employe staff(int id);
+        /// <summary>
+        /// 离职交接
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public DeparturetTransfer bPMSys(int id);
+        /// <summary>
+        /// 离职流程
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Departure departure(int id);
+        /// <summary>
+        /// 年度基础信息表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Annual_information information(int id);
+        /// <summary>
+        /// 年度详情信息表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Annual_details annual_Details(int id);
+        /// <summary>
+        /// 员工亲属详细信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Relati relative(int id);
     }
 }

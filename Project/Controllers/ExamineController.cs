@@ -36,7 +36,7 @@ namespace Project.Controllers
         /// 流程驳回
         /// </summary>
         [HttpPost, Route("api/RecedeRestart")]
-        public void RecedeRestart(ExamineModels models)
+        public void RecedeRestarta(ExamineModels models)
         {
             RecedeRestart(models);
         }

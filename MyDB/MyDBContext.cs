@@ -24,6 +24,8 @@ namespace MyDB
         public  DbSet<Procurement> Procurement { get; set; } //日常用品采购申请表
         public  DbSet<ProcurementDetails> ProcurementDetails { get; set; } //日常用品采购申请详细表
         public  DbSet<Reception> Reception { get; set; } //接待申请表
+        public DbSet<Employe> employeds { get; set; } //员工录入核定
+        public DbSet<Relati> relatis { get; set; } //员工亲属详细信息
         public  DbSet<ReceptionItemsDetails> ReceptionItemsDetails { get; set; } //接待申请物品详细表
         public  DbSet<ReceptionTripDetails> ReceptionTripDetails { get; set; } //接待申请行程详细表
         public  DbSet<MeetingRoomNew> MeetingRoomNew { get; set; } //会议室新增表

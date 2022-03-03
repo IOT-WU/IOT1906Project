@@ -111,5 +111,15 @@ namespace Project.Controllers
 
             StartProccess(xml + xml1 + xmll1, plan);
         }
+        /// <summary>
+        /// 人力资源申请流程
+        /// </summary>
+        /// <param name="plan"></param>
+        [HttpPost, Route("api/stratResources")]
+        public void stratResources(BPMResources plan)
+        {
+            var xml = CollectionToSqlXml<Resources>(plan.ResourcesData);
+            StartProccess(xml, plan);
+        }
     }
 }

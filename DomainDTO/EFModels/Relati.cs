@@ -10,7 +10,7 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 员工亲属详细信息
     /// </summary>
-    public class Relative
+    public class Relati
     {
         [Key]
         /// <summary>
