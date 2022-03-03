@@ -24,8 +24,8 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="maintain"></param>
         /// <returns></returns>
-        [HttpPost,Route("api/Adder1")]
-        public IActionResult Adder1([FromBody]Maintain maintain)
+        [HttpPost,Route("api/Addermaintain")]
+        public IActionResult Addermaintain([FromBody]Maintain maintain)
         {
             return Ok(_product.Adder1(maintain));
         }
@@ -34,29 +34,29 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="mInsurance"></param>
         /// <returns></returns>
-        [HttpPost, Route("api/Adder2")]
+        [HttpPost, Route("api/AddermInsurance")]
     
-        public IActionResult Adder2([FromBody]MInsurance mInsurance)
+        public IActionResult AddermInsurance([FromBody]MInsurance mInsurance)
         {
             return Ok(_product.Adder2(mInsurance));
         }
-        [HttpPost, Route("api/Adder3")]
+        [HttpPost, Route("api/Addermrepair")]
         /// <summary>
         /// 车辆维修记录表
         /// </summary>
         /// <param name="mrepair"></param>
         /// <returns></returns>
-        public IActionResult Adder3([FromBody] Mrepair mrepair)
+        public IActionResult Addermrepair([FromBody] Mrepair mrepair)
         {
             return Ok(_product.Adder3(mrepair));
         }
-        [HttpPost, Route("api/Adder4")]
+        [HttpPost, Route("api/AddermViolation")]
         /// <summary>
         /// 车辆违章记录
         /// </summary>
         /// <param name="mViolation"></param>
         /// <returns></returns>
-        public IActionResult Adder4([FromBody] MViolation mViolation)
+        public IActionResult AddermViolation([FromBody] MViolation mViolation)
         {
             return Ok(_product.Adder4(mViolation));
         }
