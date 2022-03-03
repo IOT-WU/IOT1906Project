@@ -39,12 +39,7 @@ namespace IServices
         /// <param name="id"></param>
         /// <returns></returns>
         public Resources find(int id);
-        /// <summary>
-        /// 员工录用
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public Employe staff(int id);
+     
         /// <summary>
         /// 离职交接
         /// </summary>
@@ -69,11 +64,12 @@ namespace IServices
         /// <param name="id"></param>
         /// <returns></returns>
         public Annual_details annual_Details(int id);
+      
         /// <summary>
-        /// 员工亲属详细信息
+        /// 请假申请表
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Relati relative(int id);
+        public Leave leave(int id);
     }
 }

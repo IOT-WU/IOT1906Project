@@ -22,7 +22,8 @@ namespace Services
         readonly IRepositoryDB<Annual_information> _information;
         readonly IRepositoryDB<Annual_details> _details;
         readonly IRepositoryDB<Relati> _relatve;
-        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve)
+        readonly IRepositoryDB<Leave> _leave;
+        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave)
         {
             _product = product;
             _minsurance = minsurance;
@@ -31,7 +32,7 @@ namespace Services
             _resources = resources;
             _employed = employed;
             _departuretransfer = departuretransfer;
- 
+            _leave = leave;
             _departure = departure;
             _details = details;
             _information = information;
@@ -80,7 +81,7 @@ namespace Services
         /// <returns></returns>
         public Resources find(int id)
         {
-            return _resources.GetModel(a => a.staff_Id.Equals(id));
+            return _resources.GetModel(a => a.TaskId.Equals(id));
         }
         /// <summary>
         /// 员工录入核定表
@@ -89,7 +90,7 @@ namespace Services
         /// <returns></returns>
         public Employe staff(int id)
         {
-            return _employed.GetModel(a => a.Employed_Id.Equals(id));
+            return _employed.GetModel(a => a.TaskId.Equals(id));
         }
         /// <summary>
         /// 离职交接
@@ -98,7 +99,7 @@ namespace Services
         /// <returns></returns>
         public DeparturetTransfer bPMSys(int id)
         {
-            return _departuretransfer.GetModel(a => a.Id.Equals(id));
+            return _departuretransfer.GetModel(a => a.TaskId.Equals(id));
         }
        
 
@@ -109,7 +110,7 @@ namespace Services
         /// <returns></returns>
         public Annual_information information(int id)
         {
-            return _information.GetModel(a => a.Annual_Fid.Equals(id));
+            return _information.GetModel(a => a.TaskId.Equals(id));
         }
         /// <summary>
         /// 离职流程
@@ -118,7 +119,7 @@ namespace Services
         /// <returns></returns>
         public Departure departure(int id)
         {
-            return _departure.GetModel(a => a.Departure_Id.Equals(id));
+            return _departure.GetModel(a => a.TaskId.Equals(id));
         }
         /// <summary>
         /// 年度详情信息表
@@ -127,16 +128,18 @@ namespace Services
         /// <returns></returns>
         public Annual_details annual_Details(int id)
         {
-            return _details.GetModel(a => a.Annual_Did.Equals(id));
+            return _details.GetModel(a => a.TaskId.Equals(id));
         }
+       
+
         /// <summary>
-        /// 员工亲属详细信息
+        /// 请假申请表
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Relati relative(int id)
+        public Leave leave(int id)
         {
-            return _relatve.GetModel(a => a.Relative_Id.Equals(id));
+            return _leave.GetModel(a => a.TaskId.Equals(id));
         }
     }
 }
