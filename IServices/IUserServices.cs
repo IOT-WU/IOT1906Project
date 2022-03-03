@@ -16,6 +16,7 @@ namespace IServices
         ResultOutPutModels<List<OutPutOwnerProcess>> GetRunningProcess(string account, int pageindex, int pagesize);
         ResultOutPutModels<List<OutPutOwnerProcess>> GetDisposeProcess(string account, int pageindex, int pagesize);
         ResultOutPutModels<List<OutPutOwnerProcess>> GetMyProcess(string account, int pageindex, int pagesize);
+        ResultOutPutModels<List<OutPutOwnerProcess>> GetEndProcess(string account, int pageindex, int pagesize);
 
     }
 }
