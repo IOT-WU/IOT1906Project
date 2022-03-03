@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace Project.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class VehicleController : ControllerBase
     {
@@ -65,7 +64,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet,Route("find")]
+        [HttpGet,Route("api/find")]
         public IActionResult find(int id)
         {
             return Ok(_product.find(id));
@@ -75,7 +74,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("finde")]
+        [HttpGet, Route("api/finde")]
         public IActionResult finde(int id)
         {
             return Ok(_product.staff(id));
@@ -85,7 +84,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("findea")]
+        [HttpGet, Route("api/findea")]
         public IActionResult findea(int id)
         {
             return Ok(_product.bPMSys(id));
@@ -96,7 +95,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("findet")]
+        [HttpGet, Route("api/findet")]
         public IActionResult findet(int id)
         {
             return Ok(_product.departure(id));
@@ -106,7 +105,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("findeta")]
+        [HttpGet, Route("api/findeta")]
         public IActionResult findeta(int id)
         {
             return Ok(_product.information(id));
@@ -116,7 +115,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("findetat")]
+        [HttpGet, Route("api/findetat")]
         public IActionResult findetat(int id)
         {
             return Ok(_product.annual_Details(id));
@@ -126,7 +125,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("findetata")]
+        [HttpGet, Route("api/findetata")]
         public IActionResult findetata(int id)
         {
             return Ok(_product.relative(id));

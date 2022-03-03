@@ -22,12 +22,6 @@ namespace Services
             this.repositoryTask = repositoryTask;
             //this.mapper = mapper;
         }
-
-       
-
-
-
-
         /// <summary>
         /// 获取正在审核的流程
         /// </summary>
@@ -76,7 +70,7 @@ namespace Services
             ResultOutPutModels<List<OutPutOwnerProcess>> result = new ResultOutPutModels<List<OutPutOwnerProcess>>();
             var list = (from a in Tasklist
                         join b in Prolist on a.TaskID equals b.TaskID
-                        where a.State != "Running   " && b.FinishAt is null && b.OwnerAccount == account
+                        where a.State != "Running   " && b.FinishAt is not null && b.OwnerAccount == account
                         select new OutPutOwnerProcess
                         {
                             Key = a.TaskID,
@@ -89,7 +83,40 @@ namespace Services
                             StepID = b.StepID,
                             NodeOwnerAccount = b.OwnerAccount,
                         }).ToList();
-            list = list.Where(x => x.NodeName != "开始").ToList();
+            //分页Approved  
+            result.Code = "200";
+            result.Msg = "OK";
+            result.Total = list.Count;
+            result.Result = list.OrderBy(x => x.Key).Skip((pageindex - 1) * pagesize).Take(pagesize).ToList();
+
+            return result;
+        }
+        /// <summary>
+         /// 获取已结束的流程
+         /// </summary>
+         /// <returns></returns>
+        public ResultOutPutModels<List<OutPutOwnerProcess>> GetEndProcess(string account, int pageindex, int pagesize)
+        {
+            //获取数据库数据
+            var Prolist = repositoryPro.QueryList(x => x.TaskID.Equals(x.TaskID));
+            var Tasklist = repositoryTask.QueryList(x => x.TaskID.Equals(x.TaskID));
+            //实例化结果输出类
+            ResultOutPutModels<List<OutPutOwnerProcess>> result = new ResultOutPutModels<List<OutPutOwnerProcess>>();
+            var list = (from a in Tasklist
+                        join b in Prolist on a.TaskID equals b.TaskID
+                        where a.State == "Approved  " && b.FinishAt is not null && b.OwnerAccount == account
+                        select new OutPutOwnerProcess
+                        {
+                            Key = a.TaskID,
+                            SerialNum = a.SerialNum,
+                            ProcessName = a.ProcessName,
+                            OwnerAccount = a.OwnerAccount,
+                            CreateAt = a.CreateAt,
+                            NodeName = b.NodeName,
+                            TaskID = a.TaskID,
+                            StepID = b.StepID,
+                            NodeOwnerAccount = b.OwnerAccount,
+                        }).ToList();
             //分页
             result.Code = "200";
             result.Msg = "OK";
@@ -124,7 +151,6 @@ namespace Services
                             StepID = b.StepID,
                             NodeOwnerAccount = a.OwnerAccount,
                         }).ToList();
-            list = list.Where(x => x.NodeName != "开始").ToList();
             //分页
             result.Code = "200";
             result.Msg = "OK";

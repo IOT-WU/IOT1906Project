@@ -42,17 +42,27 @@ namespace Project.Controllers
         [HttpGet, Route("api/GetDisposeProcess")]
         public IActionResult GetDispose(string account, int pageindex, int pagesize)
         {
-            return Ok(userServices.GetRunningProcess(account, pageindex, pagesize));
+            return Ok(userServices.GetDisposeProcess(account, pageindex, pagesize));
         }
         /// <summary>
-        /// 获取正在审核的流程
+        /// 获取已结束的流程
+        /// </summary>
+        /// <param name="account"></param>
+        /// <returns></returns>
+        [HttpGet, Route("api/GetEndProcess")]
+        public IActionResult GetEnd(string account, int pageindex, int pagesize)
+        {
+            return Ok(userServices.GetEndProcess(account, pageindex, pagesize));
+        }
+        /// <summary>
+        /// 获取自己的流程
         /// </summary>
         /// <param name="account"></param>
         /// <returns></returns>
         [HttpGet, Route("api/GetMyProcess")]
         public IActionResult GetMyProcess(string account, int pageindex, int pagesize)
         {
-            return Ok(userServices.GetRunningProcess(account, pageindex, pagesize));
+            return Ok(userServices.GetMyProcess(account, pageindex, pagesize));
         }
 
         /// <summary>

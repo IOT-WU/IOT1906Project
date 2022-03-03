@@ -118,7 +118,7 @@ namespace Services
         /// <returns></returns>
         public Departure departure(int id)
         {
-            return _departure.GetModel(a => a.Departure_Id.Equals(id));
+            return _departure.GetModel(a => a.TaskId.Equals(id));
         }
         /// <summary>
         /// 年度详情信息表
