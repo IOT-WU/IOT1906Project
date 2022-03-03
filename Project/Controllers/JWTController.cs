@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 
@@ -73,7 +74,7 @@ namespace Project.Controllers
 
             JwtSecurityToken jwt = new JwtSecurityToken(
                 claims: claims,// 声明的集合
-            //expires: .AddSeconds(36), // token的有效时间
+                               //expires: .AddSeconds(36), // token的有效时间
                 signingCredentials: creds
                 );
             var handler = new JwtSecurityTokenHandler();
