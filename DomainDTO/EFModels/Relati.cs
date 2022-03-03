@@ -17,7 +17,7 @@ namespace DomainDTO.EFModels
         /// 员工亲属id
         /// </summary>
         public int Relative_Id { get; set; }
-     
+        public int TaskId { get; set; }
         /// <summary>
         /// 亲属名称
         /// </summary>

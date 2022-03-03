@@ -64,28 +64,19 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet,Route("api/find")]
-        public IActionResult find(int id)
+        [HttpGet,Route("api/findResources")]
+        public IActionResult findResources(int id)
         {
             return Ok(_product.find(id));
         }
-        /// <summary>
-        /// 员工录入核定表
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        [HttpGet, Route("api/finde")]
-        public IActionResult finde(int id)
-        {
-            return Ok(_product.staff(id));
-        }
+      
         /// <summary>
         /// 离职交接
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("api/findea")]
-        public IActionResult findea(int id)
+        [HttpGet, Route("api/findbPMSys")]
+        public IActionResult findbPMSys(int id)
         {
             return Ok(_product.bPMSys(id));
         }
@@ -95,8 +86,8 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("api/findet")]
-        public IActionResult findet(int id)
+        [HttpGet, Route("api/finddeparture")]
+        public IActionResult finddeparture(int id)
         {
             return Ok(_product.departure(id));
         }
@@ -105,8 +96,8 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("api/findeta")]
-        public IActionResult findeta(int id)
+        [HttpGet, Route("api/findinformation")]
+        public IActionResult findinformation(int id)
         {
             return Ok(_product.information(id));
         }
@@ -115,21 +106,21 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("api/findetat")]
-        public IActionResult findetat(int id)
+        [HttpGet, Route("api/findannual_Details")]
+        public IActionResult findannual_Details(int id)
         {
             return Ok(_product.annual_Details(id));
         }
+      
         /// <summary>
-        /// 员工亲属详细信息
+        /// 请假申请表
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet, Route("api/findetata")]
-        public IActionResult findetata(int id)
+        [HttpGet, Route("api/findleave")]
+        public IActionResult findleave(int id)
         {
-            return Ok(_product.relative(id));
+            return Ok(_product.leave(id));
         }
-
     }
 }
