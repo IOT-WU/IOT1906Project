@@ -102,7 +102,7 @@ namespace Project.Controllers
             return Ok(_product.information(id));
         }
         /// <summary>
-        /// 年度详情信息表
+        /// 年度详情信息
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
