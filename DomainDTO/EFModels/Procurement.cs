@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DomainDTO.EFModels
 {
-    public class Procurement:BaseModels
+    public class Procurement
     {
         /// <summary>
         /// 日常用品采购表
