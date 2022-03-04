@@ -124,9 +124,9 @@ namespace Project.Controllers
             return File(excel, "application/ms-excel", "导出数据.xlsx");
         }
 
-        #region 流程导出Excel
-        //流程导出Excel
-        public static byte[] OutputExcel(List<OutPutOwnerProcess> entitys, string[] title)
+        #region 集合数据导出Excel
+        //集合数据流程导出Excel
+        public static byte[] OutputExcel<T>(List<T> entitys, string[] title)
         {
             IWorkbook workbook = new XSSFWorkbook();
             ISheet sheet = workbook.CreateSheet("sheet");
