@@ -19,17 +19,12 @@ namespace DomainDTO.EFModels
         public int File_Mid { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public int TaskId { get; set; }
-
-        /// <summary>
         /// 文件类型
         /// </summary>
         public string File_type { get; set; }
 
         /// <summary>
-        /// 文文件所属部门
+        /// 文件所属部门
         /// </summary>
         public int File_department { get; set; }
 

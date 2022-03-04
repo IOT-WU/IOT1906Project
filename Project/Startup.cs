@@ -50,6 +50,7 @@ namespace Project
             services.AddScoped<ILeaveServices, LeaveServices>();  //请假服务
             services.AddScoped<IMeetingRoomServices, MeetingRoomServices>();  //请假服务
             services.AddScoped<IProcurementServices, ProcurementServices>();  //请假服务
+            services.AddScoped<IProductService, ApiServer>();
             #endregion
 
             services.AddControllers();

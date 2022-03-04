@@ -8,8 +8,12 @@ namespace MyDB
     public class MyDBContext : DbContext
     {
         public MyDBContext(DbContextOptions<MyDBContext> options) : base(options) { }
+
+
         public DbSet<Leave> Leave { get; set; } //请假流程申请表
         public DbSet<BPMSysUsers> BPMSysUsers { get; set; } //用户信息表
+        public DbSet<BPMInstTasks> BPMInstTasks { get; set; } //流程表
+        public DbSet<BPMInstProcSteps> BPMInstProcSteps { get; set; } //流程状态表
         public DbSet<Annual_information> Annual_information { get; set; } //年度基础信息表
         public DbSet<Annual_details> Annual_details { get; set; } //年度详情信息表
         public DbSet<Chapter_information> Chapter_information { get; set; } //用章申请表
@@ -24,9 +28,16 @@ namespace MyDB
         public  DbSet<Procurement> Procurement { get; set; } //日常用品采购申请表
         public  DbSet<ProcurementDetails> ProcurementDetails { get; set; } //日常用品采购申请详细表
         public  DbSet<Reception> Reception { get; set; } //接待申请表
+        public DbSet<Employe> employeds { get; set; } //员工录入核定
+        public DbSet<Relati> relatis { get; set; } //员工亲属详细信息
         public  DbSet<ReceptionItemsDetails> ReceptionItemsDetails { get; set; } //接待申请物品详细表
         public  DbSet<ReceptionTripDetails> ReceptionTripDetails { get; set; } //接待申请行程详细表
         public  DbSet<MeetingRoomNew> MeetingRoomNew { get; set; } //会议室新增表
         public  DbSet<ReservationMeetingRoom> ReservationMeetingRoom { get; set; } //预定会议室表
+        public DbSet<Resources> Resources { get; set; } //离职流程申请表
+        public DbSet<Maintain> maintains { get; set; }//车辆保养记录表
+        public DbSet<MInsurance> mInsurances { get; set; }//车辆保险纪录表
+        public DbSet<Mrepair> mrepairs { get; set; }//车辆维修记录表
+        public DbSet<MViolation> mViolations { get; set; }//车辆违章记录
     }
 }

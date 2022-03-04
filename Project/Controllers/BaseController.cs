@@ -1,6 +1,7 @@
 ﻿
 using DomainDTO.EFModels;
 using DomainDTO.InPutModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Project.OtherApi;
@@ -18,7 +19,7 @@ using System.Xml;
 namespace Project.Controllers
 {
 
-    public class BaseController
+    public class BaseController : ControllerBase
     {
         protected DataSet dataSet = new DataSet("FormData");
         private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
@@ -118,7 +119,7 @@ namespace Project.Controllers
         /// <param name="formDataSet"></param>
         /// <param name="baseModels"></param>
         /// <returns></returns>
-        protected Task<string> ApproveProccess(ExamineModels baseModels)
+        protected Task<string> ApproveProccess(ApproveModel baseModels)
         {
             BPMModels models = new BPMModels(configuration)
             {
@@ -127,7 +128,7 @@ namespace Project.Controllers
                 BPMUserPass = baseModels.BPMUserPass,
                 FullName = baseModels.FullName,
                 ProcessName = baseModels.ProcessName,
-                TaskId = baseModels.TaskId,
+                StepId = baseModels.StepId,
                 Comments = baseModels.Comments,
             };
             return MyClientApi.OptClientApi(models.BpmServerUrl + "approve", models);
@@ -171,6 +172,22 @@ namespace Project.Controllers
                 Comments = baseModels.Comments,
             };
             return MyClientApi.OptClientApi(models.BpmServerUrl + "RecedeRestart", models);
+        }
+        /// <summary>
+        /// 获取表单路径
+        /// </summary>
+        /// <returns></returns>
+        protected Task<string> GetPostUrl(BaseModels baseModels)
+        {
+            BPMModels models = new BPMModels(configuration)
+            {
+                Action = baseModels.Action,
+                BPMUser = baseModels.BPMUser,
+                BPMUserPass = baseModels.BPMUserPass,
+                FullName = baseModels.FullName,
+                ProcessName = baseModels.ProcessName,
+            };
+            return MyClientApi.OptClientApi(models.BpmServerUrl + "GetUrl", models);
         }
     }
 }

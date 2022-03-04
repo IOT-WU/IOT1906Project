@@ -10,7 +10,7 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 用章基础信息表
     /// </summary>
-    public class Chapter_information
+    public class Chapter_information /*: BaseModels*/
     {
         [Key]
         /// <summary>
