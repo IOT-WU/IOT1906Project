@@ -38,15 +38,15 @@ namespace DomainDTO.EFModels
         /// <summary>
         /// 人员类别
         /// </summary>
-        public string Employed_Categary { get; set; }
+        public int Employed_Categary { get; set; }
         /// <summary>
         /// 姓名
         /// </summary>
-        public string _Name { get; set; }
+        public string Name { get; set; }
         /// <summary>Employed
         /// 性别
         /// </summary>
-        public bool Employed_Sex { get; set; }
+        public string Employed_Sex { get; set; }
         /// <summary>
         /// 出生年月
         /// </summary>

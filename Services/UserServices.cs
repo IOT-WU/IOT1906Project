@@ -46,6 +46,7 @@ namespace Services
                             NodeName = b.NodeName,
                             TaskID = a.TaskID,
                             StepID = b.StepID,
+                            State = a.State,
                             NodeOwnerAccount = b.OwnerAccount,
                         }).ToList();
             list = list.Where(x => x.NodeName != "开始").ToList();
@@ -53,7 +54,7 @@ namespace Services
             result.Code = "200";
             result.Msg = "OK";
             result.Total = list.Count;
-            result.Result = list.OrderBy(x => x.Key).Skip((pageindex - 1) * pagesize).Take(pagesize).ToList();
+            result.Result = list.OrderByDescending(x => x.Key).Skip((pageindex - 1) * pagesize).Take(pagesize).ToList();
 
             return result;
         }
@@ -81,20 +82,21 @@ namespace Services
                             NodeName = b.NodeName,
                             TaskID = a.TaskID,
                             StepID = b.StepID,
+                            State = a.State,
                             NodeOwnerAccount = b.OwnerAccount,
                         }).ToList();
             //分页Approved  
             result.Code = "200";
             result.Msg = "OK";
             result.Total = list.Count;
-            result.Result = list.OrderBy(x => x.Key).Skip((pageindex - 1) * pagesize).Take(pagesize).ToList();
+            result.Result = list.OrderByDescending(x => x.Key).Skip((pageindex - 1) * pagesize).Take(pagesize).ToList();
 
             return result;
         }
         /// <summary>
-         /// 获取已结束的流程
-         /// </summary>
-         /// <returns></returns>
+        /// 获取已结束的流程
+        /// </summary>
+        /// <returns></returns>
         public ResultOutPutModels<List<OutPutOwnerProcess>> GetEndProcess(string account, int pageindex, int pagesize)
         {
             //获取数据库数据
@@ -115,13 +117,14 @@ namespace Services
                             NodeName = b.NodeName,
                             TaskID = a.TaskID,
                             StepID = b.StepID,
+                            State = a.State,
                             NodeOwnerAccount = b.OwnerAccount,
                         }).ToList();
             //分页
             result.Code = "200";
             result.Msg = "OK";
             result.Total = list.Count;
-            result.Result = list.OrderBy(x => x.Key).Skip((pageindex - 1) * pagesize).Take(pagesize).ToList();
+            result.Result = list.OrderByDescending(x => x.Key).Skip((pageindex - 1) * pagesize).Take(pagesize).ToList();
 
             return result;
         }
@@ -137,7 +140,6 @@ namespace Services
             //实例化结果输出类
             ResultOutPutModels<List<OutPutOwnerProcess>> result = new ResultOutPutModels<List<OutPutOwnerProcess>>();
             var list = (from a in Tasklist
-                        join b in Prolist on a.TaskID equals b.TaskID
                         where a.OwnerAccount == account
                         select new OutPutOwnerProcess
                         {
@@ -146,16 +148,15 @@ namespace Services
                             ProcessName = a.ProcessName,
                             OwnerAccount = a.OwnerAccount,
                             CreateAt = a.CreateAt,
-                            NodeName = b.NodeName,
                             TaskID = a.TaskID,
-                            StepID = b.StepID,
+                            State = a.State,
                             NodeOwnerAccount = a.OwnerAccount,
                         }).ToList();
             //分页
             result.Code = "200";
             result.Msg = "OK";
             result.Total = list.Count;
-            result.Result = list.OrderBy(x => x.Key).Skip((pageindex - 1) * pagesize).Take(pagesize).ToList();
+            result.Result = list.OrderByDescending(x => x.Key).Skip((pageindex - 1) * pagesize).Take(pagesize).ToList();
 
             return result;
         }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Project.OtherApi;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -20,9 +21,11 @@ namespace Project.Controllers
     public class FlowController : BaseController
     {
         private ILeaveServices leaveServices;
-        public FlowController(IConfiguration configuration, ILeaveServices leaveServices) : base(configuration)
+        private IEmpServices iempServices;
+        public FlowController(IConfiguration configuration, ILeaveServices leaveServices,IEmpServices iempServices) : base(configuration)
         {
             this.leaveServices = leaveServices;
+            this.iempServices = iempServices;
         }
 
         /// <summary>
@@ -36,6 +39,23 @@ namespace Project.Controllers
             return ls;
         }
         /// <summary>
+        /// 获取部门
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet, Route("api/GetDepat")]
+        public List<BPMSysOUs> GetDepat()
+        {
+            var list = iempServices.Bind();
+            return list;
+        }
+        //获得角色
+        [HttpGet, Route("api/GetOutRole")]
+        public List<BPMSysOURoles> GetOutRole(int OUID)
+        {
+            var list = iempServices.RoleBind(OUID);
+            return list;
+        }
+
         /// 发起请假流程
         /// </summary>
         /// <param name="leave"></param>
@@ -43,7 +63,7 @@ namespace Project.Controllers
         public void StartLeave(BPMLeaveModels leave)
         {
             var xml = CollectionToSqlXml<Leave>(leave.LeaveData);
-            StartProccess(xml,leave);
+            StartProccess(xml, leave);
         }
         /// <summary>
         /// 离职申请流程
@@ -102,6 +122,41 @@ namespace Project.Controllers
 
             StartProccess(xml + xml1 + xmll1, plan);
         }
+
+        /// <summary>
+        /// 用章申请流程
+        /// </summary>
+        /// <param name="departure"></param>
+        [HttpPost, Route("api/startChaptertion")]
+        public void startChaptertion(Chapter_text chapter)
+        {
+            var xml = CollectionToSqlXml<Chapter_information>(chapter.chaptertext);
+            StartProccess(xml, chapter);
+        }
+
+        /// <summary>
+        /// 刻章申请流程
+        /// </summary>
+        /// <param name="departure"></param>
+        [HttpPost, Route("api/startPrintstion")]
+        public void startPrintstion(Prints_text prints)
+        {
+            var xml = CollectionToSqlXml<Prints_information>(prints.printstext);
+            StartProccess(xml, prints);
+        }
+
+        /// <summary>
+        /// 年度计划流程
+        /// </summary>
+        /// <param name="plan"></param>
+        [HttpPost, Route("api/stratPlan")]
+        public void StartPlan(Annual_textto plan)
+        {
+            var xml = CollectionToSqlXml<Annual_information>(plan.PlanData);
+            var xml1 = CollectionToSqlXml<Annual_details>(plan.PlanInfoDetail);
+
+            StartProccess(xml + xml1, plan);
+        }
         /// <summary>
         /// 人力资源申请流程
         /// </summary>
@@ -112,5 +167,8 @@ namespace Project.Controllers
             var xml = CollectionToSqlXml<Resources>(plan.ResourcesData);
             StartProccess(xml, plan);
         }
+
+      
+
     }
 }

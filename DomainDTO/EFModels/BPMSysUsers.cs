@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DomainDTO.EFModels
 {
+
     /// <summary>
     /// 用户信息表（登录）
     /// </summary>

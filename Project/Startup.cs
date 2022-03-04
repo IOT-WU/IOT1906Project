@@ -48,7 +48,10 @@ namespace Project
             //这里写注入服务类
             services.AddScoped<IUserServices, UserServices>();  //用户服务
             services.AddScoped<ILeaveServices, LeaveServices>();  //请假服务
+            services.AddScoped<IMeetingRoomServices, MeetingRoomServices>();  //请假服务
+            services.AddScoped<IProcurementServices, ProcurementServices>();  //请假服务
             services.AddScoped<IProductService, ApiServer>();
+            services.AddScoped<IEmpServices, EmpServices>();  //请假服务
             #endregion
 
             services.AddControllers();

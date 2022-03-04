@@ -19,11 +19,6 @@ namespace DomainDTO.EFModels
         public int Announcement_Fid { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        public int TaskId { get; set; }
-
-        /// <summary>
         /// 类型
         /// </summary>
         public string Announcement_type { get; set; }

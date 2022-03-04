@@ -27,7 +27,7 @@ namespace DomainDTO.EFModels
         /// <summary>
         /// 数量
         /// </summary>
-        public int Goods_Num { get; set; }
+        public string Goods_Num { get; set; }
         /// <summary>
         /// 单位
         /// </summary>
@@ -35,11 +35,11 @@ namespace DomainDTO.EFModels
         /// <summary>
         /// 单价
         /// </summary>
-        public float Goods_Price { get; set; }
+        public string Goods_Price { get; set; }
         /// <summary>
         /// 金额
         /// </summary>
-        public float Goods_Money { get; set; }
+        public string Goods_Money { get; set; }
         /// <summary>
         /// 备注
         /// </summary>

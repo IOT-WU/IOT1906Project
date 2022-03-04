@@ -102,7 +102,7 @@ namespace Project.Controllers
             return Ok(_product.information(id));
         }
         /// <summary>
-        /// 年度详情信息表
+        /// 年度详情信息
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -121,6 +121,39 @@ namespace Project.Controllers
         public IActionResult findleave(int id)
         {
             return Ok(_product.leave(id));
+        }
+
+        /// <summary>
+        /// 员工面谈添加
+        /// </summary>
+        /// <param name="annual"></param>
+        /// <returns></returns>
+        [HttpPost, Route("api/GetExitInterviewadd")]
+        public IActionResult GetExitInterviewadd(ExitInterview annual)
+        {
+            return Ok(_product.GetExitInterviewadd(annual));
+        }
+
+        /// <summary>
+        /// 公告基本信息表添加
+        /// </summary>
+        /// <param name="annual"></param>
+        /// <returns></returns>
+        [HttpPost, Route("api/GetAnnouncementadd")]
+        public IActionResult GetAnnouncementadd(Announcement_information Announcement)
+        {
+            return Ok(_product.GetAnnouncementadd(Announcement));
+        }
+
+        /// <summary>
+        /// 文件管理表添加方法
+        /// </summary>
+        /// <param name="annual"></param>
+        /// <returns></returns>
+        [HttpPost, Route("api/GetFileadd")]
+        public IActionResult GetFileadd(File_information File)
+        {
+            return Ok(_product.GetFileadd(File));
         }
     }
 }

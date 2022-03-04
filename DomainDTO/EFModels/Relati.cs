@@ -30,5 +30,10 @@ namespace DomainDTO.EFModels
         /// 亲属在公司任何部门工作、任何职务
         /// </summary>
         public string Relative_Position { get; set; }
+        /// <summary>
+        /// 备注
+        /// </summary>
+        public string Relative_Note { get; set; }
+
     }
 }
