@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace DomainDTO.InPutModels
 {
-    public class InputPlanAll:BaseModels
+    public class BPMDeparture : BaseModels
     {
-        public string PlanData { get; set; }
 
-        public string PlanInfoDetail { get; set; }
-        public string PlanInfoMen { get; set; }
+        /// <summary>
+        /// 存放Departure的xml字符串
+        /// </summary>
+        public string DepartureData { get; set; }
     }
 }

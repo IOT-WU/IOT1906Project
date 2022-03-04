@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace DomainDTO.InPutModels
 {
-    public class InputPlanAll:BaseModels
+    public class BPMLeaveModels : BaseModels
     {
-        public string PlanData { get; set; }
-
-        public string PlanInfoDetail { get; set; }
-        public string PlanInfoMen { get; set; }
+        /// <summary>
+        /// 存放Leave的xml字符串
+        /// </summary>
+        public string LeaveData { get; set; }
     }
 }

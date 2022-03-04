@@ -1,8 +1,7 @@
-﻿using BPMAPI.OtherApi;
-using bpmdemoapi.models;
-using DomainDTO.EFModels;
+﻿using DomainDTO.EFModels;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Project.OtherApi;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -126,14 +125,13 @@ namespace Project.Controllers
         //}
 
 
-        protected Task<int> StartProccess(string formDataSet, bpmdemoapi.models.BaseModels baseModels)
+        protected Task<string> StartProccess(string formDataSet,BaseModels baseModels)
         {
 
 
             BPMModels models = new BPMModels(configuration)
             {
                 Action = baseModels.Action,
-
                 BPMUser = baseModels.BPMUser,
                 BPMUserPass = baseModels.BPMUserPass,
                 FormDataSet = "<FormData>" + formDataSet + "</FormData>",

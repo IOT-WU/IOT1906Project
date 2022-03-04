@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 用户信息表（登录）
     /// </summary>
+    //[NotMapped]
     public class BPMSysUsers
     {
         [Key]

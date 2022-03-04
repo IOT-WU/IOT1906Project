@@ -1,10 +1,12 @@
-﻿using BPMAPI.OtherApi;
-using DomainDTO.EFModels;
+﻿using DomainDTO.EFModels;
 using DomainDTO.InPutModels;
+using IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 
@@ -14,66 +16,57 @@ using System.Threading.Tasks;
 namespace Project.Controllers
 {
     [ApiController]
-    public class FlowController :ControllerBase
+    public class FlowController : BaseController
     {
         private IConfiguration configuration;
-        public FlowController(IConfiguration configuration)
+        private ILeaveServices leaveServices;
+        private IEmpServices iempServices;
+        public FlowController(IConfiguration configuration, ILeaveServices leaveServices,IEmpServices iempServices) : base(configuration)
         {
             this.configuration = configuration;
+            this.leaveServices = leaveServices;
+            this.iempServices = iempServices;
         }
 
         /// <summary>
-        /// 发起流程
+        /// 获取请假类型
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet,Route("api/GetLeaveType")]
+        public List<LeaveType> GetLeaveType()
+        {
+            var ls = leaveServices.GetLeaveTypeList();
+            return ls;
+        }
+        /// <summary>
+        /// 获取部门
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet, Route("api/GetDepat")]
+        public List<BPMSysOUs> GetDepat()
+        {
+            var list = iempServices.Bind();
+            return list;
+        }
+        //获得角色
+        [HttpGet, Route("api/GetOutRole")]
+        public List<BPMSysOURoles> GetOutRole(int OUID)
+        {
+            var list = iempServices.RoleBind(OUID);
+            return list;
+        }
+
+        /// 发起请假流程
         /// </summary>
         /// <param name="leave"></param>
         [HttpPost, Route("api/startleave")]
-        public void StartLeave(Leave leave)
+        public void StartLeave(BPMLeaveModels leave)
         {
-            StartProccess<Leave>(leave);
+            var xml = CollectionToSqlXml<Leave>(leave.LeaveData);
+            StartProccess(xml, leave);
         }
-     
-        /// <summary>
-        /// 获取table
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        private DataSet GetDataSet(Object data)
-        {
-            Type type = data.GetType();
-            DataSet formDataSet = new DataSet("FormData");
 
-            DataTable table = new DataTable(type.Name);
-            string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName";
-            foreach (var property in type.GetProperties())
-            {
-                if (!IsNotField.Contains(property.Name))
-                    table.Columns.Add(new DataColumn(property.Name, property.PropertyType));
-            }
-            DataRow add_row = table.NewRow();
-            foreach (var property in type.GetProperties())
-            {
-                if (!IsNotField.Contains(property.Name))
-                    add_row[property.Name] = property.GetValue(data);
-            }
-            table.Rows.Add(add_row);
-            formDataSet.Tables.Add(table);
-            return formDataSet;
-        }
-        //
-        private Task<int> StartProccess<T>(T leaveNew) where T : BaseModels, new()
-        {
-            string formDataSet = ConvertXML.ConvertDataSetToXML(GetDataSet(leaveNew));
-            BPMModels models = new BPMModels(configuration)
-            {
-                Action = leaveNew.Action,
+      
 
-                BPMUser = leaveNew.BPMUser,
-                BPMUserPass = leaveNew.BPMUserPass,
-                FormDataSet = formDataSet,
-                FullName = leaveNew.FullName,
-                ProcessName = leaveNew.ProcessName
-            };
-            return MyClientApi.OptClientApi(models.BpmServerUrl, models);
-        }
     }
 }

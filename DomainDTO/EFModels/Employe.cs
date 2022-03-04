@@ -1,16 +1,18 @@
-﻿using DomainDTO.EFModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainDTO.InPutModels
+namespace DomainDTO.EFModels
 {
-    public class InputEmploye:BaseModels
+    /// <summary>
+    /// 员工录入核定表
+    /// </summary>
+    public class Employe
     {
-       
+        [Key]
         /// <summary>
         /// 员工录入id
         /// </summary>
@@ -36,7 +38,7 @@ namespace DomainDTO.InPutModels
         /// <summary>
         /// 人员类别
         /// </summary>
-        public string Employed_Categary { get; set; }
+        public int Employed_Categary { get; set; }
         /// <summary>
         /// 姓名
         /// </summary>
@@ -44,7 +46,7 @@ namespace DomainDTO.InPutModels
         /// <summary>Employed
         /// 性别
         /// </summary>
-        public bool Employed_Sex { get; set; }
+        public string Employed_Sex { get; set; }
         /// <summary>
         /// 出生年月
         /// </summary>
@@ -72,7 +74,7 @@ namespace DomainDTO.InPutModels
         /// <summary>
         /// 是否有亲属在本公司工作
         /// </summary>
-        public string Employed_Relative { get; set; }
+        public string Employed_Relative  { get; set; }
         /// <summary>
         /// 拟定工资及待遇
         /// </summary>
@@ -85,9 +87,5 @@ namespace DomainDTO.InPutModels
         /// 试用期
         /// </summary>
         public string Employed_Thetrial { get; set; }
-        /// <summary>
-        /// 备注
-        /// </summary>
-        public string Employed_Node { get; set; }
     }
 }
