@@ -102,6 +102,41 @@ namespace Project.Controllers
 
             StartProccess(xml + xml1 + xmll1, plan);
         }
+
+        /// <summary>
+        /// 用章申请流程
+        /// </summary>
+        /// <param name="departure"></param>
+        [HttpPost, Route("api/startChaptertion")]
+        public void startChaptertion(Chapter_text chapter)
+        {
+            var xml = CollectionToSqlXml<Chapter_information>(chapter.chaptertext);
+            StartProccess(xml, chapter);
+        }
+
+        /// <summary>
+        /// 刻章申请流程
+        /// </summary>
+        /// <param name="departure"></param>
+        [HttpPost, Route("api/startPrintstion")]
+        public void startPrintstion(Prints_text prints)
+        {
+            var xml = CollectionToSqlXml<Prints_information>(prints.printstext);
+            StartProccess(xml, prints);
+        }
+
+        /// <summary>
+        /// 年度计划流程
+        /// </summary>
+        /// <param name="plan"></param>
+        [HttpPost, Route("api/stratPlan")]
+        public void StartPlan(Annual_textto plan)
+        {
+            var xml = CollectionToSqlXml<Annual_information>(plan.PlanData);
+            var xml1 = CollectionToSqlXml<Annual_details>(plan.PlanInfoDetail);
+
+            StartProccess(xml + xml1, plan);
+        }
         /// <summary>
         /// 人力资源申请流程
         /// </summary>

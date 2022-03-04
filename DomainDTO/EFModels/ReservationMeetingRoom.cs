@@ -11,7 +11,6 @@ namespace DomainDTO.EFModels
     {
         [Key]
         public int Reservation_Id { get; set; }
-        public int TaskId { get; set; }
         /// <summary>
         /// 会议室
         /// </summary>
