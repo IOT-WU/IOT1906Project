@@ -71,5 +71,26 @@ namespace IServices
         /// <param name="id"></param>
         /// <returns></returns>
         public Leave leave(int id);
+
+        /// <summary>
+        /// 员工面谈添加接口
+        /// </summary>
+        /// <param name="annual"></param>
+        /// <returns></returns>
+        int GetExitInterviewadd(ExitInterview Interview);
+
+        /// <summary>
+        /// 公告基本信息添加接口
+        /// </summary>
+        /// <param name="annual"></param>
+        /// <returns></returns>
+        int GetAnnouncementadd(Announcement_information Announcement);
+
+        /// <summary>
+        /// 文件管理表添加接口
+        /// </summary>
+        /// <param name="annual"></param>
+        /// <returns></returns>
+        int GetFileadd(File_information File);
     }
 }

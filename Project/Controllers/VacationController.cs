@@ -30,7 +30,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="annual"></param>
         /// <returns></returns>
-        [HttpGet, Route("api/GetAnnualadd")]
+        [HttpPost, Route("api/GetAnnualadd")]
         public IActionResult GetAnnualadd(Annual_Leavetable annual)
         {
             return Ok(leaveServices.GetAnnualadd(annual));
@@ -42,7 +42,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="table"></param>
         /// <returns></returns>
-        [HttpGet, Route("api/UptAnnual")]
+        [HttpPost, Route("api/UptAnnual")]
         public IActionResult UptAnnual(Annual_Leavetable table)
         {
             return Ok(leaveServices.UptAnnual(table));

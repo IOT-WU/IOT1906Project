@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Project.OtherApi
 {
-    public static class MyClientApi
+
+    public class MyClientApi
     {
         public static async Task<string> OptClientApi(string webapiUrl,BPMModels models)
         {
@@ -22,4 +23,5 @@ namespace Project.OtherApi
             return   result;
         }
     }
+
 }

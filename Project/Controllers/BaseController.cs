@@ -35,6 +35,7 @@ namespace Project.Controllers
             {
                 TCollection = JsonConvert.DeserializeObject<List<T>>(json);
             }
+
             else
             {
                 TCollection = JsonConvert.DeserializeObject<List<T>>("[" + json + "]");
