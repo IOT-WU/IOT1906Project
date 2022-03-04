@@ -16,6 +16,7 @@ namespace DomainDTO.InPutModels
         public string OwnerAccount { get; set; }
         public DateTime CreateAt { get; set; }
         public string NodeName { get; set; }
+        public string State { get; set; }
         public int TaskID { get; set; }
         public int StepID { get; set; }
         public string NodeOwnerAccount { get; set; }
