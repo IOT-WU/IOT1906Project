@@ -9,8 +9,12 @@ namespace DomainDTO.EFModels
 {
     public class Departure
     {
+        /// <summary>
+        /// 离职流程
+        /// </summary>
         [Key]
         public int Departure_Id { get; set; }
+        public int TaskId { get; set; }
         /// <summary>
         /// 申请人
         /// </summary>
@@ -38,7 +42,7 @@ namespace DomainDTO.EFModels
         /// <summary>
         /// 离职类型
         /// </summary>
-        public int Departure_Type { get; set; }
+        public string Departure_Type { get; set; }
         /// <summary>
         /// 离职原因
         /// </summary>

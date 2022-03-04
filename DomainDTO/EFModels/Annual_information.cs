@@ -10,13 +10,13 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 年度基础信息表
     /// </summary>
-    public class Annual_information
+    public class Annual_information 
     {
         [Key]
         /// <summary>
         /// 年度基础信息表主键（不可修改）
         /// </summary>
-        public int Fid { get; set; }
+        public int Annual_Fid { get; set; }
 
         /// <summary>
         /// 

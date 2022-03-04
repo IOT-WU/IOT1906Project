@@ -1,4 +1,7 @@
-﻿using DomainDTO.EFModels;
+﻿
+using DomainDTO.EFModels;
+using DomainDTO.InPutModels;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Project.OtherApi;
@@ -16,7 +19,7 @@ using System.Xml;
 namespace Project.Controllers
 {
 
-    public class BaseController
+    public class BaseController : ControllerBase
     {
         protected DataSet dataSet = new DataSet("FormData");
         private const string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName,Detail";
@@ -37,10 +40,8 @@ namespace Project.Controllers
             {
                 TCollection = JsonConvert.DeserializeObject<List<T>>("[" + json + "]");
             }
-
             //先把集合转换成数据表，然后把数据表转换成SQLXML
             return DataTableToSqlXml(CollectionToDataTable(TCollection)).Value.Replace("<DocumentElement>", "").Replace("</DocumentElement>", "");
-
         }
         private DataTable CollectionToDataTable<T>(List<T> TCollection)
         {
@@ -94,51 +95,100 @@ namespace Project.Controllers
             }
             return xml;
         }
-        ///// <summary>
-        ///// 获取table
-        ///// </summary>
-        ///// <param name="data"></param>
-        ///// <returns></returns>
-        //private static DataSet GetDataSet(Object data)
-        //{
-        //    Type type = data.GetType();
-
-        //    DataSet formDataSet = new DataSet("FormData");
-
-        //    DataTable table = new DataTable(type.Name);
-        //    string IsNotField = "Action,BPMUser,BPMUserPass,FullName,ProcessName";
-        //    foreach (var property in type.GetProperties())
-        //    {
-
-        //        if (!IsNotField.Contains(property.Name))
-        //            table.Columns.Add(new DataColumn(property.Name, property.PropertyType));
-        //    }
-        //    DataRow add_row = table.NewRow();
-        //    foreach (var property in type.GetProperties())
-        //    {
-        //        if (!IsNotField.Contains(property.Name))
-        //            add_row[property.Name] = property.GetValue(data);
-        //    }
-        //    table.Rows.Add(add_row);
-        //    formDataSet.Tables.Add(table);
-        //    return formDataSet;
-        //}
-
-
-        protected Task<string> StartProccess(string formDataSet,BaseModels baseModels)
+        /// <summary>
+        /// 发起流程
+        /// </summary>
+        /// <param name="formDataSet"></param>
+        /// <param name="baseModels"></param>
+        /// <returns></returns>
+        protected Task<string> StartProccess(string formDataSet, BaseModels baseModels)
         {
-
-
             BPMModels models = new BPMModels(configuration)
             {
                 Action = baseModels.Action,
                 BPMUser = baseModels.BPMUser,
                 BPMUserPass = baseModels.BPMUserPass,
-                FormDataSet = "<FormData>" + formDataSet + "</FormData>",
                 FullName = baseModels.FullName,
-                ProcessName = baseModels.ProcessName
+                ProcessName = baseModels.ProcessName,
+                FormDataSet = "<FormData>" + formDataSet + "</FormData>",
             };
-            return  MyClientApi.OptClientApi(models.BpmServerUrl, models);
+            return MyClientApi.OptClientApi(models.BpmServerUrl + "StartBPM", models);
+        }
+        /// <summary>
+        /// 审核通过
+        /// </summary>
+        /// <param name="formDataSet"></param>
+        /// <param name="baseModels"></param>
+        /// <returns></returns>
+        protected Task<string> ApproveProccess(ApproveModel baseModels)
+        {
+            BPMModels models = new BPMModels(configuration)
+            {
+                Action = baseModels.Action,
+                BPMUser = baseModels.BPMUser,
+                BPMUserPass = baseModels.BPMUserPass,
+                FullName = baseModels.FullName,
+                ProcessName = baseModels.ProcessName,
+                StepId = baseModels.StepId,
+                Comments = baseModels.Comments,
+            };
+            return MyClientApi.OptClientApi(models.BpmServerUrl + "approve", models);
+        }
+        /// <summary>
+        /// 拒绝申请
+        /// </summary>
+        /// <param name="formDataSet"></param>
+        /// <param name="baseModels"></param>
+        /// <returns></returns>
+        protected Task<string> RejectProccess(ExamineModels baseModels)
+        {
+            BPMModels models = new BPMModels(configuration)
+            {
+                Action = baseModels.Action,
+                BPMUser = baseModels.BPMUser,
+                BPMUserPass = baseModels.BPMUserPass,
+                FullName = baseModels.FullName,
+                ProcessName = baseModels.ProcessName,
+                TaskId = baseModels.TaskId,
+                Comments = baseModels.Comments,
+            };
+            return MyClientApi.OptClientApi(models.BpmServerUrl + "Reject", models);
+        }
+        /// <summary>
+        /// 退回重填
+        /// </summary>
+        /// <param name="formDataSet"></param>
+        /// <param name="baseModels"></param>
+        /// <returns></returns>
+        protected Task<string> RecedeRestart(ExamineModels baseModels)
+        {
+            BPMModels models = new BPMModels(configuration)
+            {
+                Action = baseModels.Action,
+                BPMUser = baseModels.BPMUser,
+                BPMUserPass = baseModels.BPMUserPass,
+                FullName = baseModels.FullName,
+                ProcessName = baseModels.ProcessName,
+                TaskId = baseModels.TaskId,
+                Comments = baseModels.Comments,
+            };
+            return MyClientApi.OptClientApi(models.BpmServerUrl + "RecedeRestart", models);
+        }
+        /// <summary>
+        /// 获取表单路径
+        /// </summary>
+        /// <returns></returns>
+        protected Task<string> GetPostUrl(BaseModels baseModels)
+        {
+            BPMModels models = new BPMModels(configuration)
+            {
+                Action = baseModels.Action,
+                BPMUser = baseModels.BPMUser,
+                BPMUserPass = baseModels.BPMUserPass,
+                FullName = baseModels.FullName,
+                ProcessName = baseModels.ProcessName,
+            };
+            return MyClientApi.OptClientApi(models.BpmServerUrl + "GetUrl", models);
         }
     }
 }

@@ -11,8 +11,6 @@ namespace DomainDTO.EFModels
     public class BPMModels
     {
         private IConfiguration configuration;
-
-
         public BPMModels(IConfiguration configuration)
         {
             this.configuration = configuration;
@@ -52,5 +50,17 @@ namespace DomainDTO.EFModels
         /// </summary>
         public string FormDataSet { get; set; }
         public string BpmServerUrl { get { return configuration.GetSection("bpmServerUrl").Value; } }
+        /// <summary>
+        /// 流程ID
+        /// </summary>
+        public int TaskId { get; set; }
+        /// <summary>
+        /// 流程节点ID
+        /// </summary>
+        public int StepId { get; set; }
+        /// <summary>
+        /// 意见
+        /// </summary>
+        public string Comments { get; set; }
     }
 }
