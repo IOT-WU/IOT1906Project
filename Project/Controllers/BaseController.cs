@@ -31,7 +31,7 @@ namespace Project.Controllers
         protected string CollectionToSqlXml<T>(string json) where T : class, new()
         {
             List<T> TCollection;
-            if (json.IndexOf("[{") > 0)
+            if (json.IndexOf("[{") >= 0)
             {
                 TCollection = JsonConvert.DeserializeObject<List<T>>(json);
             }
