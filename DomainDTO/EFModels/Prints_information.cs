@@ -10,7 +10,7 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 刻章申请表
     /// </summary>
-    public class Prints_information
+    public class Prints_information  /*: BaseModels*/
     {
         [Key]
         /// <summary>

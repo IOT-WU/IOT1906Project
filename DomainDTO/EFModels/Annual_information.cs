@@ -10,7 +10,7 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 年度基础信息表
     /// </summary>
-    public class Annual_information :BaseModels
+    public class Annual_information /*:BaseModels*/
     {
         [Key]
         /// <summary>
@@ -42,10 +42,5 @@ namespace DomainDTO.EFModels
         /// 制表年份-可填写
         /// </summary>
         public DateTime TAB_year { get; set; }
-
-        /// <summary>
-        /// 子表的字符串
-        /// </summary>
-        public string Annual_detailsDetail { get; set; }
     }
 }
