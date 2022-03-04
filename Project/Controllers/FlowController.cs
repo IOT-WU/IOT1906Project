@@ -19,17 +19,14 @@ namespace Project.Controllers
     [ApiController]
     public class FlowController : BaseController
     {
-        private IConfiguration configuration;
         private ILeaveServices leaveServices;
         public FlowController(IConfiguration configuration, ILeaveServices leaveServices) : base(configuration)
         {
-            this.configuration = configuration;
             this.leaveServices = leaveServices;
         }
 
         /// <summary>
         /// 获取请假类型
-        /// 发起请假流程
         /// </summary>
         /// <returns></returns>
         [HttpGet,Route("api/GetLeaveType")]
@@ -47,17 +44,6 @@ namespace Project.Controllers
         {
             var xml = CollectionToSqlXml<Leave>(leave.LeaveData);
             StartProccess(xml,leave);
-        }
-
-
-        /// <summary>
-        /// 发起年度招聘流程
-        /// </summary>
-        /// <param name="employe"></param>
-        [HttpPost, Route("api/startEmploy")]
-        public void StartLeave(Annual_information employe)
-        {
-            //StartProccess<Annual_information>(employe);
         }
         /// <summary>
         /// 离职申请流程
@@ -150,6 +136,16 @@ namespace Project.Controllers
             var xml1 = CollectionToSqlXml<Annual_details>(plan.PlanInfoDetail);
 
             StartProccess(xml + xml1, plan);
+        }
+        /// <summary>
+        /// 人力资源申请流程
+        /// </summary>
+        /// <param name="plan"></param>
+        [HttpPost, Route("api/stratResources")]
+        public void stratResources(BPMResources plan)
+        {
+            var xml = CollectionToSqlXml<Resources>(plan.ResourcesData);
+            StartProccess(xml, plan);
         }
     }
 }

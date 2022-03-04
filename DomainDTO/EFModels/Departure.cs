@@ -9,6 +9,9 @@ namespace DomainDTO.EFModels
 {
     public class Departure
     {
+        /// <summary>
+        /// 离职流程
+        /// </summary>
         [Key]
         public int Departure_Id { get; set; }
         public int TaskId { get; set; }

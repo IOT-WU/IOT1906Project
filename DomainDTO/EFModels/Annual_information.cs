@@ -10,7 +10,7 @@ namespace DomainDTO.EFModels
     /// <summary>
     /// 年度基础信息表
     /// </summary>
-    public class Annual_information /*:BaseModels*/
+    public class Annual_information 
     {
         [Key]
         /// <summary>

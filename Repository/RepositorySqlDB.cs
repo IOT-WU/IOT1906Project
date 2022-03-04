@@ -1,4 +1,5 @@
-﻿using IRepository;
+﻿using DomainDTO.EFModels;
+using IRepository;
 using MyDB;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,6 @@ namespace Repository
         {
             this.db = db;
         }
-
         /// <summary>
         /// 添加数据对象
         /// </summary>
@@ -54,6 +54,11 @@ namespace Repository
             return db.SaveChanges();
         }
 
+        public Resources find(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// 获取单个数据对象
         /// </summary>
@@ -75,5 +80,6 @@ namespace Repository
             var list = db.Set<T>().AsQueryable().Where(exception).ToList();
             return list;
         }
+      
     }
 }
