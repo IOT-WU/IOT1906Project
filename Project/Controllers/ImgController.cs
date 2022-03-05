@@ -6,11 +6,9 @@ using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 using System.Data;
-using NPOI.SS.UserModel;
 using DomainDTO.InPutModels;
-using NPOI.XSSF.UserModel;
-using System.Reflection;
 using IServices;
+using Project.OtherApi;
 
 namespace Project.Controllers
 {
@@ -108,63 +106,15 @@ namespace Project.Controllers
         /// <summary>
         /// 流程导出Excel
         /// </summary>
-        [HttpPost, Route("api/OutPutExcel")]
-        public IActionResult OutPutExcel(List<OutPutOwnerProcess> ls)
+        [HttpPost, Route("api/DownloadExcel")]
+        public IActionResult DownloadExcel(List<OutPutOwnerProcess> ls)
         {
             //var ls = userServices.GetRunningProcess().Result;
             string[] vs = new string[] { "Key", "流水号", "流程名称", "持有人", "发起时间", "审批节点状态", "审批状态", "TaskID", "StepID", "审批人" };
-            var excel = OutputExcel(ls, vs);
+            //引用静态类
+            var excel = ConvertExcel.OutputExcel(ls, vs);
             return File(excel, "application/ms-excel", "导出数据.xlsx");
         }
 
-        #region 集合数据导出Excel
-        //集合数据流程导出Excel
-        public static byte[] OutputExcel<T>(List<T> entitys, string[] title)
-        {
-            IWorkbook workbook = new XSSFWorkbook();
-            ISheet sheet = workbook.CreateSheet("sheet");
-            IRow Title = null;
-            IRow rows = null;
-            Type entityType = entitys[0].GetType();
-            PropertyInfo[] entityProperties = entityType.GetProperties();
-
-            for (int i = 0; i <= entitys.Count; i++)
-            {
-                if (i == 0)
-                {
-                    Title = sheet.CreateRow(0);
-                    for (int k = 1; k < title.Length + 1; k++)
-                    {
-                        Title.CreateCell(0).SetCellValue("序号");
-                        Title.CreateCell(k).SetCellValue(title[k - 1]);
-                    }
-
-                    continue;
-                }
-                else
-                {
-                    rows = sheet.CreateRow(i);
-                    object entity = entitys[i - 1];
-                    for (int j = 1; j <= entityProperties.Length; j++)
-                    {
-                        object[] entityValues = new object[entityProperties.Length];
-                        entityValues[j - 1] = entityProperties[j - 1].GetValue(entity);
-                        rows.CreateCell(0).SetCellValue(i);
-                        rows.CreateCell(j).SetCellValue(entityValues[j - 1].ToString());
-                    }
-                }
-            }
-
-            byte[] buffer = new byte[1024 * 2];
-            using (MemoryStream ms = new MemoryStream())
-            {
-                workbook.Write(ms);
-                buffer = ms.ToArray();
-                ms.Close();
-            }
-
-            return buffer;
-        }
-        #endregion
     }
 }
