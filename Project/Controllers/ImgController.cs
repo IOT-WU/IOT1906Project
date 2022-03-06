@@ -115,6 +115,18 @@ namespace Project.Controllers
             var excel = ConvertExcel.OutputExcel(ls, vs);
             return File(excel, "application/ms-excel", "导出数据.xlsx");
         }
+        /// <summary>
+        /// 所有流程导出Excel
+        /// </summary>
+        [HttpGet, Route("api/DownloadAllExcel")]
+        public IActionResult DownloadAllExcel()
+        {
+            var ls = userServices.GetAllProcess();
+            string[] vs = new string[] { "Key", "流水号", "流程名称", "持有人", "发起时间", "审批节点状态", "审批状态", "TaskID", "StepID", "审批人" };
+            //引用静态类
+            var excel = ConvertExcel.OutputExcel(ls, vs);
+            return File(excel, "application/ms-excel", "导出数据.xlsx");
+        }
 
     }
 }
