@@ -39,7 +39,7 @@ namespace Project.Controllers
             return Ok(meeting.ReservationMeetingRoomAdd(reserva));
         }
         /// <summary>
-        /// 下拉框
+        /// 获取下拉框数据
         /// </summary>
         /// <param name="reserva"></param>
         /// <returns></returns>

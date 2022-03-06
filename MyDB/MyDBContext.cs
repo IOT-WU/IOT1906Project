@@ -52,7 +52,7 @@ namespace MyDB
         public DbSet<Sacceptance> Sacceptance { get; set; } //固定资产验收基础表
         public DbSet<Accdetailed> Accdetailed { get; set; } //固定资产验收详细信息表
         public DbSet<Attachment> Attachment { get; set; } //固定资产附件信息表
-        public DbSet<BPMSysOURoles> BPMSysOURoles { get; set; } //角色表
+        public DbSet<BPMSysOURoles> BPMSysOURoles { get; set; } //角色
 
 
     }
