@@ -36,5 +36,6 @@ namespace IRepository
         /// <param name="exception">lambda表达式</param>
         /// <returns></returns>
         T GetModel(Expression<Func<T, bool>> exception);
+ 
     }
 }

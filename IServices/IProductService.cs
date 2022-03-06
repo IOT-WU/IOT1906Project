@@ -92,5 +92,22 @@ namespace IServices
         /// <param name="annual"></param>
         /// <returns></returns>
         int GetFileadd(File_information File);
+        /// <summary>
+        /// 固定资产交接表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Handover GetHandover(int id);
+        /// <summary>
+        /// 用章基础信息表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Chapter_information chapter(int id);
+        /// <summary>
+        /// 资产验收详细表
+        /// </summary>
+        /// <returns></returns>
+        public Accdetailed Gitaccdetailed(int id);
     }
 }

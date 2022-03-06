@@ -1,4 +1,4 @@
-﻿using DomainDTO.EFModels;
+﻿
 using IRepository;
 using MyDB;
 using System;
@@ -54,10 +54,7 @@ namespace Repository
             return db.SaveChanges();
         }
 
-        public Resources find(int id)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         /// <summary>
         /// 获取单个数据对象

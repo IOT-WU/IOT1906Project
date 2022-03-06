@@ -26,10 +26,14 @@ namespace Services
         readonly IRepositoryDB<ExitInterview> _Exception;
         readonly IRepositoryDB<Announcement_information> _Announcement;
         readonly IRepositoryDB<File_information> _File;
-        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave,IRepositoryDB<ExitInterview> Exception, IRepositoryDB<Announcement_information> Announcement, IRepositoryDB<File_information> File)
+        readonly IRepositoryDB<Handover> _handover;
+        readonly IRepositoryDB<Chapter_information> _chapter;
+        readonly IRepositoryDB<Accdetailed> _accdetaild;
+        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave,IRepositoryDB<ExitInterview> Exception, IRepositoryDB<Announcement_information> Announcement, IRepositoryDB<File_information> File, IRepositoryDB<Handover> handover, IRepositoryDB<Chapter_information> chapter, IRepositoryDB<Accdetailed> accdetaild)
         {
             _product = product;
             _minsurance = minsurance;
+            _handover = handover;
             _mrpair = mrpair;
             _mviolation = mviolation;
             _resources = resources;
@@ -43,6 +47,8 @@ namespace Services
             _Exception = Exception;
             _Announcement = Announcement;
             _File = File;
+            _chapter = chapter;
+            _accdetaild = accdetaild;
         }
         /// <summary>
         /// 车辆保险
@@ -177,6 +183,33 @@ namespace Services
         public int GetFileadd(File_information File)
         {
             return _File.ExecuteAdd(File);
+        }
+        /// <summary>
+        /// 固定资产交接表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Handover GetHandover(int id)
+        {
+           return _handover.GetModel(a=>a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 用章基础信息表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Chapter_information chapter(int id)
+        {
+            return _chapter.GetModel(a => a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 资产验收详细表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Accdetailed Gitaccdetailed(int id)
+        {
+            return _accdetaild.GetModel(a => a.TaskId.Equals(id));
         }
     }
 }

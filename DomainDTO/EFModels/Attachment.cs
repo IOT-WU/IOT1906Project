@@ -35,6 +35,9 @@ namespace DomainDTO.EFModels
         /// 附件
         /// </summary>
         public string Attachment_Attment { get; set; }
+        /// <summary>
+        /// 备注
+        /// </summary>
         public string Attachment_Note { get; set; }
     }
 }

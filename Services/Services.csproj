@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -12,6 +12,7 @@
     <ProjectReference Include="..\DomainDTO\DomainDTO.csproj" />
     <ProjectReference Include="..\IRepository\IRepository.csproj" />
     <ProjectReference Include="..\IServices\IServices.csproj" />
+    <ProjectReference Include="..\MyDB\MyDB.csproj" />
   </ItemGroup>
 
 </Project>

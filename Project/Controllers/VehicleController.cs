@@ -155,5 +155,35 @@ namespace Project.Controllers
         {
             return Ok(_product.GetFileadd(File));
         }
+        [HttpGet,Route("api/GitHandover")]
+        /// <summary>
+        /// 固定资产交接表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult GitHandover(int id)
+        {
+            return Ok(_product.GetHandover(id));
+        }
+        /// <summary>
+        /// 用章基础信息表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet,Route("api/GitChapter")]
+        public IActionResult GitChapter(int id)
+        {
+            return Ok(_product.departure(id));
+        }
+        [HttpGet,Route("api/GitAccdetailed")]
+        /// <summary>
+        /// 资产验收详细表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult GitAccdetailed(int id)
+        {
+            return Ok(_product.Gitaccdetailed(id));
+        }
     }
 }
