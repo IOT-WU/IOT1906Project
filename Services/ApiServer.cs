@@ -23,7 +23,10 @@ namespace Services
         readonly IRepositoryDB<Annual_details> _details;
         readonly IRepositoryDB<Relati> _relatve;
         readonly IRepositoryDB<Leave> _leave;
-        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave)
+        readonly IRepositoryDB<ExitInterview> _Exception;
+        readonly IRepositoryDB<Announcement_information> _Announcement;
+        readonly IRepositoryDB<File_information> _File;
+        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave,IRepositoryDB<ExitInterview> Exception, IRepositoryDB<Announcement_information> Announcement, IRepositoryDB<File_information> File)
         {
             _product = product;
             _minsurance = minsurance;
@@ -37,6 +40,9 @@ namespace Services
             _details = details;
             _information = information;
             _relatve = relatve;
+            _Exception = Exception;
+            _Announcement = Announcement;
+            _File = File;
         }
         /// <summary>
         /// 车辆保险
@@ -140,6 +146,37 @@ namespace Services
         public Leave leave(int id)
         {
             return _leave.GetModel(a => a.TaskId.Equals(id));
+        }
+
+        /// <summary>
+        /// 员工面谈添加方法
+        /// </summary>
+        /// <param name="Interview"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public int GetExitInterviewadd(ExitInterview Interview)
+        {
+            return _Exception.ExecuteAdd(Interview);
+        }
+
+        /// <summary>
+        /// 公告基本表添加方法
+        /// </summary>
+        /// <param name="Announcement"></param>
+        /// <returns></returns>
+        public int GetAnnouncementadd(Announcement_information Announcement)
+        {
+            return _Announcement.ExecuteAdd(Announcement);
+        }
+
+        /// <summary>
+        /// 文件管理表添加方法
+        /// </summary>
+        /// <param name="File"></param>
+        /// <returns></returns>
+        public int GetFileadd(File_information File)
+        {
+            return _File.ExecuteAdd(File);
         }
     }
 }

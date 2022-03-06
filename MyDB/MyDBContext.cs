@@ -34,10 +34,26 @@ namespace MyDB
         public  DbSet<ReceptionTripDetails> ReceptionTripDetails { get; set; } //接待申请行程详细表
         public  DbSet<MeetingRoomNew> MeetingRoomNew { get; set; } //会议室新增表
         public  DbSet<ReservationMeetingRoom> ReservationMeetingRoom { get; set; } //预定会议室表
+        public  DbSet<Annual_Leavetable> Annual_Leavetable { get; set; } //年度假期表
         public DbSet<Resources> Resources { get; set; } //离职流程申请表
         public DbSet<Maintain> maintains { get; set; }//车辆保养记录表
         public DbSet<MInsurance> mInsurances { get; set; }//车辆保险纪录表
         public DbSet<Mrepair> mrepairs { get; set; }//车辆维修记录表
         public DbSet<MViolation> mViolations { get; set; }//车辆违章记录
+
+
+
+        public DbSet<BPMSysOUs> BPMSysOUs { get; set; } //部门信息表
+        public DbSet<Employe> Employe { get; set; } //员工录用基础表
+        public  DbSet<Relati> Relati { get; set; } //员工亲属表
+        public DbSet<Fixedasse> Fixedasse { get; set; } //固定资产申请流程表
+        public DbSet<Handover> Handover { get; set; } //固定资产交接流程表
+        public DbSet<Borrow> Borrow { get; set; } //固定资产借用流程表
+        public DbSet<Sacceptance> Sacceptance { get; set; } //固定资产验收基础表
+        public DbSet<Accdetailed> Accdetailed { get; set; } //固定资产验收详细信息表
+        public DbSet<Attachment> Attachment { get; set; } //固定资产附件信息表
+        public DbSet<BPMSysOURoles> BPMSysOURoles { get; set; } //角色
+
+
     }
 }

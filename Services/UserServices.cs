@@ -171,5 +171,37 @@ namespace Services
             var obj = repositoryLogin.GetModel(x => x.Account.Equals(model.UserName) & x.Password.Equals(model.UserPass));
             return obj;
         }
+
+        /// <summary>
+        /// 获取所有流程
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public List<OutPutOwnerProcess> GetAllProcess()
+        {
+            //获取数据库数据
+            var Prolist = repositoryPro.QueryList(x => x.TaskID.Equals(x.TaskID));
+            var Tasklist = repositoryTask.QueryList(x => x.TaskID.Equals(x.TaskID));
+            //实例化结果输出类
+            ResultOutPutModels<List<OutPutOwnerProcess>> result = new ResultOutPutModels<List<OutPutOwnerProcess>>();
+            var list = (from a in Tasklist
+                        join b in Prolist on a.TaskID equals b.TaskID
+                        where b.OwnerAccount != null
+                        select new OutPutOwnerProcess
+                        {
+                            Key = a.TaskID,
+                            SerialNum = a.SerialNum,
+                            ProcessName = a.ProcessName,
+                            OwnerAccount = a.OwnerAccount,
+                            CreateAt = a.CreateAt,
+                            NodeName = b.NodeName,
+                            TaskID = a.TaskID,
+                            StepID = b.StepID,
+                            State = a.State,
+                            NodeOwnerAccount = b.OwnerAccount,
+                        }).ToList();
+
+            return list;
+        }
     }
 }
