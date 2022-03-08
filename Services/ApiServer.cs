@@ -41,7 +41,9 @@ namespace Services
         public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave,IRepositoryDB<ExitInterview> Exception, IRepositoryDB<Announcement_information> Announcement, IRepositoryDB<File_information> File, IRepositoryDB<Handover> handover, IRepositoryDB<Chapter_information> chapter, IRepositoryDB<Accdetailed> accdetaild, IRepositoryDB<Borrow> borrow, IRepositoryDB<ReceptionTripDetails> receptiontripdetails, IRepositoryDB<Sacceptance> sacceptance, IRepositoryDB<ReceptionItemsDetails> receptionitemsdetails, IRepositoryDB<ProcurementDetails> procurementDetails, IRepositoryDB<Procurement> procurement, IRepositoryDB<Prints_information> prints_information, IRepositoryDB<Fixedasse> fixedasse, IRepositoryDB<CarApplication> carapplicarion)
         {
             _procurement = procurement;
+            _sacceptance = sacceptance;
             _receptiontripdetails = receptiontripdetails;
+            _fixedasse = fixedasse;
             _product = product;
             _minsurance = minsurance;
             _handover = handover;
@@ -315,7 +317,7 @@ namespace Services
         /// <returns></returns>
         public Procurement GetProcurement(int id)
         {
-            return _procurement.GetModel(a=>a.Equals(id));
+            return _procurement.GetModel(a=>a.TaskId.Equals(id));
         }
         /// <summary>
         /// 刻章申请表

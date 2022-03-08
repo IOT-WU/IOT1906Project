@@ -270,7 +270,7 @@ namespace Project.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet,Route("api/GetprocurementDetails")]
+        [HttpGet,Route("api/GetprocurementDetail")]
         public IActionResult GetprocurementDetails(int id)
         {
             return Ok(_product.GetprocurementDetails(id));
