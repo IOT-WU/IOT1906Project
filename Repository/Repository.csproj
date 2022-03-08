@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\IRepository\IRepository.csproj" />
     <ProjectReference Include="..\MyDB\MyDB.csproj" />
+
   </ItemGroup>
 
 </Project>

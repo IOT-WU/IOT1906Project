@@ -29,8 +29,19 @@ namespace Services
         readonly IRepositoryDB<Handover> _handover;
         readonly IRepositoryDB<Chapter_information> _chapter;
         readonly IRepositoryDB<Accdetailed> _accdetaild;
-        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave,IRepositoryDB<ExitInterview> Exception, IRepositoryDB<Announcement_information> Announcement, IRepositoryDB<File_information> File, IRepositoryDB<Handover> handover, IRepositoryDB<Chapter_information> chapter, IRepositoryDB<Accdetailed> accdetaild)
+        readonly IRepositoryDB<Borrow> _borrow;
+        readonly IRepositoryDB<ReceptionTripDetails> _receptiontripdetails;
+        readonly IRepositoryDB<Sacceptance> _sacceptance;
+        readonly IRepositoryDB<ReceptionItemsDetails> _receptionitemsdetails;
+        readonly IRepositoryDB<ProcurementDetails> _procurementDetails;
+        readonly IRepositoryDB<Procurement> _procurement;
+        readonly IRepositoryDB<Prints_information> _prints_information;
+        readonly IRepositoryDB<Fixedasse> _fixedasse;
+        readonly IRepositoryDB<CarApplication> _carapplicarion;
+        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave,IRepositoryDB<ExitInterview> Exception, IRepositoryDB<Announcement_information> Announcement, IRepositoryDB<File_information> File, IRepositoryDB<Handover> handover, IRepositoryDB<Chapter_information> chapter, IRepositoryDB<Accdetailed> accdetaild, IRepositoryDB<Borrow> borrow, IRepositoryDB<ReceptionTripDetails> receptiontripdetails, IRepositoryDB<Sacceptance> sacceptance, IRepositoryDB<ReceptionItemsDetails> receptionitemsdetails, IRepositoryDB<ProcurementDetails> procurementDetails, IRepositoryDB<Procurement> procurement, IRepositoryDB<Prints_information> prints_information, IRepositoryDB<Fixedasse> fixedasse, IRepositoryDB<CarApplication> carapplicarion)
         {
+            _procurement = procurement;
+            _receptiontripdetails = receptiontripdetails;
             _product = product;
             _minsurance = minsurance;
             _handover = handover;
@@ -49,9 +60,14 @@ namespace Services
             _File = File;
             _chapter = chapter;
             _accdetaild = accdetaild;
+            _borrow = borrow;
+            _receptionitemsdetails = receptionitemsdetails;
+            _procurementDetails = procurementDetails;
+            _prints_information = prints_information;
+            _carapplicarion = carapplicarion;
         }
         /// <summary>
-        /// 车辆保险
+        /// 车辆保险添加
         /// </summary>
         /// <param name="maintain"></param>
         /// <returns></returns>
@@ -60,7 +76,7 @@ namespace Services
             return _product.ExecuteAdd(maintain);
         }
         /// <summary>
-        /// 车辆保养
+        /// 车辆保养添加
         /// </summary>
         /// <param name="mInsurancea"></param>
         /// <returns></returns>
@@ -69,7 +85,7 @@ namespace Services
             return _minsurance.ExecuteAdd(mInsurancea);
         }
         /// <summary>
-        /// 车辆维修
+        /// 车辆维修添加
         /// </summary>
         /// <param name="mrepair"></param>
         /// <returns></returns>
@@ -78,7 +94,7 @@ namespace Services
             return _mrpair.ExecuteAdd(mrepair);
         }
         /// <summary>
-        /// 车辆违章
+        /// 车辆违章添加
         /// </summary>
         /// <param name="mViolation"></param>
         /// <returns></returns>
@@ -210,6 +226,123 @@ namespace Services
         public Accdetailed Gitaccdetailed(int id)
         {
             return _accdetaild.GetModel(a => a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 固定资产资料借用单表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Borrow Gitborrow(int id)
+        {
+            return _borrow.GetModel(a => a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 车辆保险编辑
+        /// </summary>
+        /// <param name="maintain"></param>
+        /// <returns></returns>
+        public int EditMaintain(Maintain maintain)
+        {
+            return _product.ExecuteUpd(maintain);
+        }
+        /// <summary>
+        /// 车辆保养编辑
+        /// </summary>
+        /// <param name="mInsurance"></param>
+        /// <returns></returns>
+        public int EditMInsurance(MInsurance mInsurance)
+        {
+            return _minsurance.ExecuteUpd(mInsurance);
+        }
+        /// <summary>
+        /// 车辆维修编辑
+        /// </summary>
+        /// <param name="mrepair"></param>
+        /// <returns></returns>
+        public int EditMrepair(Mrepair mrepair)
+        {
+            return _mrpair.ExecuteUpd(mrepair);
+        }
+        /// <summary>
+        /// 车辆违章编辑
+        /// </summary>
+        /// <param name="mViolation"></param>
+        /// <returns></returns>
+        public int EditMViolation(MViolation mViolation)
+        {
+            return _mviolation.ExecuteUpd(mViolation);
+        }
+        /// <summary>
+        /// 接待申请行程详情表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ReceptionTripDetails GetReceptionTripDetails(int id)
+        {
+           return  _receptiontripdetails.GetModel(a => a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 固定资产验收基础表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Sacceptance GetSacceptance(int id)
+        {
+            return _sacceptance.GetModel(a => a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 接待申请物品详情表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ReceptionItemsDetails GetReceptionItemsDetails(int id)
+        {
+            return _receptionitemsdetails.GetModel(a => a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 日常用品采购详情表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ProcurementDetails GetprocurementDetails(int id)
+        {
+            return _procurementDetails.GetModel(a => a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 日常用品采购表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Procurement GetProcurement(int id)
+        {
+            return _procurement.GetModel(a=>a.Equals(id));
+        }
+        /// <summary>
+        /// 刻章申请表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Prints_information GetPrints_Information(int id)
+        {
+            return _prints_information.GetModel(a => a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 固定资产申请单
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Fixedasse GetFixedasse(int id)
+        {
+            return _fixedasse.GetModel(a=>a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 用车申请表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public CarApplication GetCarApplication(int id)
+        {
+            return _carapplicarion.GetModel(a => a.TaskId.Equals(id));
         }
     }
 }

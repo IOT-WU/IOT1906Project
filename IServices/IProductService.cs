@@ -107,7 +107,87 @@ namespace IServices
         /// <summary>
         /// 资产验收详细表
         /// </summary>
+        /// <param name="id"></param>
         /// <returns></returns>
         public Accdetailed Gitaccdetailed(int id);
+        /// <summary>
+        /// 固定资产资料借用单表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Borrow Gitborrow(int id);
+        /// <summary>
+        /// 车辆保险
+        /// </summary>
+        /// <param name="maintain"></param>
+        /// <returns></returns>
+        public int EditMaintain(Maintain maintain);
+        /// <summary>
+        /// 车辆保养
+        /// </summary>
+        /// <param name="mInsurance"></param>
+        /// <returns></returns>
+        public int EditMInsurance(MInsurance mInsurance);
+        /// <summary>
+        /// 车辆维修
+        /// </summary>
+        /// <param name="mrepair"></param>
+        /// <returns></returns>
+        public int EditMrepair(Mrepair mrepair);
+        /// <summary>
+        /// 车辆违章
+        /// </summary>
+        /// <param name="mViolation"></param>
+        /// <returns></returns>
+        public int EditMViolation(MViolation mViolation);
+        /// <summary>
+        /// 接待申请行程详情表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ReceptionTripDetails GetReceptionTripDetails(int id);
+        /// <summary>
+        /// 固定资产验收基础表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Sacceptance GetSacceptance(int id);
+        /// <summary>
+        /// 接待申请物品详情表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ReceptionItemsDetails GetReceptionItemsDetails(int id);
+        /// <summary>
+        /// 日常用品采购详情表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ProcurementDetails GetprocurementDetails(int id);
+        /// <summary>
+        /// 日常用品采购表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Procurement GetProcurement(int id);
+        /// <summary>
+        /// 刻章申请表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Prints_information GetPrints_Information(int id);
+        /// <summary>
+        /// 固定资产申请单
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Fixedasse GetFixedasse(int id);
+        /// <summary>
+        /// 用车申请表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public CarApplication GetCarApplication(int id);
+
     }
 }

@@ -185,5 +185,135 @@ namespace Project.Controllers
         {
             return Ok(_product.Gitaccdetailed(id));
         }
+        [HttpGet,Route("api/Gitborrow")]
+        /// <summary>
+        /// 固定资产资料借用单表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult Gitborrow(int id)
+        {
+            return Ok(_product.Gitborrow(id));
+        }
+        /// <summary>
+        /// 车辆保险
+        /// </summary>
+        /// <param name="maintain"></param>
+        /// <returns></returns>
+        [HttpPost,Route("api/EditMaintain")]
+        public IActionResult EditMaintain(Maintain maintain)
+        {
+            return Ok(_product.EditMaintain(maintain));
+        }
+        /// <summary>
+        /// 车辆保养
+        /// </summary>
+        /// <param name="mInsurance"></param>
+        /// <returns></returns>
+        [HttpPost,Route("api/EditMInsurance")]
+        public IActionResult EditMInsurance(MInsurance mInsurance)
+        {
+            return Ok(_product.EditMInsurance(mInsurance));
+        }
+        /// <summary>
+        /// 车辆维修
+        /// </summary>
+        /// <param name="mrepair"></param>
+        /// <returns></returns>
+        [HttpPost,Route("api/EditMrepair")]
+        public IActionResult EditMrepair(Mrepair mrepair)
+        {
+            return Ok(_product.EditMrepair(mrepair));
+        }
+        /// <summary>
+        /// 车辆违章
+        /// </summary>
+        /// <param name="mViolation"></param>
+        /// <returns></returns>
+        [HttpPost,Route("api/EditMViolation")]
+        public IActionResult EditMViolation(MViolation mViolation)
+        {
+            return Ok(_product.EditMViolation(mViolation));
+        }
+        [HttpGet,Route("api/GetReceptionTripDetails")]
+        /// <summary>
+        /// 接待申请行程详情表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult GetReceptionTripDetails(int id)
+        {
+            return Ok(_product.GetReceptionTripDetails(id));
+        }
+        [HttpGet,Route("api/GetSacceptance")]
+        /// <summary>
+        /// 固定资产验收基础表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult GetSacceptance(int id)
+        {
+            return Ok(_product.GetSacceptance(id));
+        }
+        /// <summary>
+        /// 接待申请物品详情表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet,Route("api/GetReceptionItemsDetails")]
+        public IActionResult GetReceptionItemsDetails(int id)
+        {
+            return Ok(_product.GetReceptionItemsDetails(id));
+        }
+        /// <summary>
+        /// 日常用品采购详情表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet,Route("api/GetprocurementDetails")]
+        public IActionResult GetprocurementDetails(int id)
+        {
+            return Ok(_product.GetprocurementDetails(id));
+        }
+        /// <summary>
+        /// 日常用品采购表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet,Route("api/GetProcurement")]
+        public IActionResult GetProcurement(int id)
+        {
+            return Ok(_product.GetProcurement(id));
+        }
+        /// <summary>
+        /// 刻章申请表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet,Route("api/GetPrints_Information")]
+        public IActionResult GetPrints_Information(int id)
+        {
+            return Ok(_product.GetPrints_Information(id));
+        }
+        /// <summary>
+        /// 固定资产申请单
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet,Route("api/GetFixedasse")]
+        public IActionResult GetFixedasse(int id)
+        {
+            return Ok(_product.GetFixedasse(id));
+        }
+        [HttpGet,Route("api/GetCarApplication")]
+        /// <summary>
+        /// 用车申请表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult GetCarApplication(int id)
+        {
+            return Ok(_product.GetCarApplication(id));
+        }
     }
 }
