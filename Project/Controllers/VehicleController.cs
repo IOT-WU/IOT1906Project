@@ -315,5 +315,15 @@ namespace Project.Controllers
         {
             return Ok(_product.GetCarApplication(id));
         }
+        [HttpGet,Route("api/GetReception")]
+        /// <summary>
+        /// 接待申请表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public IActionResult GetReception(int id)
+        {
+            return Ok(_product.GetReception(id));
+        }
     }
 }

@@ -188,6 +188,12 @@ namespace IServices
         /// <param name="id"></param>
         /// <returns></returns>
         public CarApplication GetCarApplication(int id);
+        /// <summary>
+        /// 接待申请表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Reception GetReception(int id);
 
     }
 }

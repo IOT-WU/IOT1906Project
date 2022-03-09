@@ -38,7 +38,8 @@ namespace Services
         readonly IRepositoryDB<Prints_information> _prints_information;
         readonly IRepositoryDB<Fixedasse> _fixedasse;
         readonly IRepositoryDB<CarApplication> _carapplicarion;
-        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave,IRepositoryDB<ExitInterview> Exception, IRepositoryDB<Announcement_information> Announcement, IRepositoryDB<File_information> File, IRepositoryDB<Handover> handover, IRepositoryDB<Chapter_information> chapter, IRepositoryDB<Accdetailed> accdetaild, IRepositoryDB<Borrow> borrow, IRepositoryDB<ReceptionTripDetails> receptiontripdetails, IRepositoryDB<Sacceptance> sacceptance, IRepositoryDB<ReceptionItemsDetails> receptionitemsdetails, IRepositoryDB<ProcurementDetails> procurementDetails, IRepositoryDB<Procurement> procurement, IRepositoryDB<Prints_information> prints_information, IRepositoryDB<Fixedasse> fixedasse, IRepositoryDB<CarApplication> carapplicarion)
+        readonly IRepositoryDB<Reception> _reception;
+        public ApiServer(IRepositoryDB<Maintain> product, IRepositoryDB<MInsurance> minsurance, IRepositoryDB<Mrepair> mrpair, IRepositoryDB<MViolation> mviolation, IRepositoryDB<Resources> resources, IRepositoryDB<Employe> employed, IRepositoryDB<DeparturetTransfer> departuretransfer, IRepositoryDB<Departure> departure, IRepositoryDB<Annual_information> information, IRepositoryDB<Annual_details> details, IRepositoryDB<Relati> relatve, IRepositoryDB<Leave> leave,IRepositoryDB<ExitInterview> Exception, IRepositoryDB<Announcement_information> Announcement, IRepositoryDB<File_information> File, IRepositoryDB<Handover> handover, IRepositoryDB<Chapter_information> chapter, IRepositoryDB<Accdetailed> accdetaild, IRepositoryDB<Borrow> borrow, IRepositoryDB<ReceptionTripDetails> receptiontripdetails, IRepositoryDB<Sacceptance> sacceptance, IRepositoryDB<ReceptionItemsDetails> receptionitemsdetails, IRepositoryDB<ProcurementDetails> procurementDetails, IRepositoryDB<Procurement> procurement, IRepositoryDB<Prints_information> prints_information, IRepositoryDB<Fixedasse> fixedasse, IRepositoryDB<CarApplication> carapplicarion, IRepositoryDB<Reception> reception)
         {
             _procurement = procurement;
             _sacceptance = sacceptance;
@@ -67,6 +68,7 @@ namespace Services
             _procurementDetails = procurementDetails;
             _prints_information = prints_information;
             _carapplicarion = carapplicarion;
+            _reception = reception;
         }
         /// <summary>
         /// 车辆保险添加
@@ -345,6 +347,15 @@ namespace Services
         public CarApplication GetCarApplication(int id)
         {
             return _carapplicarion.GetModel(a => a.TaskId.Equals(id));
+        }
+        /// <summary>
+        /// 接待申请表
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Reception GetReception(int id)
+        {
+            return _reception.GetModel(a => a.TaskId.Equals(id));
         }
     }
 }
